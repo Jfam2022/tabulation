@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'montserrant' sans-serif;
+    scroll-behavior: smooth;
+    
+}
+a{
+    text-decoration: none;
+}
+.container1{
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+}
+
+p{
+    
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+.section-title span{
+    color: #0d6efd;
+}
+
+
+
+.brand h1{
+    font-size:  1.2rem;
+    text-transform: uppercase;
+    color: white;
+}
+.brand h1 span{
+    color: white;
+}
+#tablead h1{
+    color: white;
+}
+/*header section*/
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    
+}
+#header .header{
+    min-height: 10vh;
+    background-color: #df5d86;
+    transition: .3 ease background-color;
+    min-width: 100%;
+    
+   
+}
+#header img{
+    width: 40px;
+    height: 40px;
+    margin-left: 120px;
+}
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+#header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: rgb(65, 55, 71);
+    width: 100vw;
+    height: 100vh;
+    opacity: .9;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5 ease left;
+    
+}
+#header .nav-list ul.active{
+    left: 0;
+
+
+}
+
+#header .nav-list ul a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+
+}
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0); 
+    color: rgba(216, 218, 241, 0.678);
+    font-size: 7rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%,-50%)scale(1);
+    letter-spacing: initial;
+}
+#header .nav-list ul li:hover a{
+    color: black;
+}
+#header .hamburger {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+}
+#header .hamburger:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: humburger_puls 1s ease infinite;
+}
+#header .hamburger .bar{
+    height: 2px;
+    width: 28px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3 ease;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after{
+    top: 8px;
+}
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+#header .hamburger.active .bar::before{
+    bottom: 0;
+
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+
+
+#tablead h1{
+    text-align: center;
+}
+#no-more-tables img{
+    height: 300px;
+    width: 220px;
+}
+
+.w-5{
+    display: none;
+    overflow: hidden;
+}
+#tablead{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    min-height: 100vh;
+
+}
+thead{
+    background-image: linear-gradient(rgba(41, 17, 29, 0.7),rgb(58, 51, 9));
+}
+
+table td{
+
+   
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+table{
+    max-width:100%;
+    font-size: 1.3rem;
+    font-weight: 900;
+
+}
+
+.container{
+   
+    max-width:95%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:20px;
+    
+
+}
+.box{
+    height: 70vh;
+    border-radius: 6px;
+    position: relative;
+    background: #f5f3ed;
+    color:black;
+    margin-top: 10px;
+
+}
+
+
+.title{
+   
+    text-align: center;
+    font-weight: 500;
+    font-size:18px;
+}
+
+ 
+
+  .container form .user-details{
+    max-height:380px;
+    overflow-y:scroll;
+   
+  }
+  #tablead .btnadd{
+    position: absolute;
+    margin-left: 10px;
+  }
+  .btnadd{
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 1.4rem;
+ 
+}
+
+ #hero1{
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(204,177,0),rgba(199, 62, 131, 0.7));
+    z-index: -1;
+}
+
+#hero1 .container h3{
+    font-weight: 900;
+    line-height: 1.2;
+   
+  
+   
+}
+.logopage img{
+    width: 100px;
+    height: 100px;
+   
+}
+
+#hero1 h4{
+ 
+    font-weight: 800;
+    line-height: 1;
+   
+   
+    color: crimson;
+    font-size: 18px;
+    margin-bottom: 20px;
+   
+    
+}
+#datatable img{
+    width: 100px;
+    height:100px;
+
+}
+
+
+
+@keyframes humburger_puls {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    
+}
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: #0d6efd;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    #header img{
+        
+        margin-left: 150px;
+    }
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        
+        font-size: 1.3rem;
+    
+    }
+    #header .nav-list ul a:after{
+        display: none;
+    }
+   
+    .brand h1{
+        font-size:  1.5rem;
+        text-transform: uppercase;
+        color: white;
+    }
+   
+  
+  
+}
+
+@media only screen and (max-width:800px) {
+   
+    .container{
+        
+        max-width:95%;
+        display:grid;
+        grid-template-columns: none;
+        grid-gap:80px;
+        
+    
+    }
+    #tablead{
+      
+        min-height: 200vh;
+    
+    }
+   
+ 
+}
+
+   
+@media only screen and (max-width: 570px){
+      
+    table td{
+
+   
+        font-size: 1rem;
+        font-weight: 900;
+    }
+    table{
+        max-width:100%;
+        font-size: 1rem;
+        font-weight: 900;
+    
+    }
+   
+    #tablead{
+      min-height: 220vh;
+    
+    }
+  
+}    
+  
+        
+

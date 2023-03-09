@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'montserrant' sans-serif;
+    scroll-behavior: smooth;
+    
+}
+@keyframes spin{
+    from {transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
+}
+.spinning{
+    animation: spin 3s infinite;
+}
+.container h1{
+    text-align: center;
+    color:#fff;
+}
+table img{
+    height: 40px;
+    width: 40px;
+}
+.form-search{
+    margin-left: 380px;
+    display: inline-block;
+ }
+ .form-search .form-control{
+    width: 150px;
+    font-size: 1.1rem;
+}
+.form-search button{
+    width: 80px;
+    height: 25px;
+    font-weight: bold;
+}
+
+.w-5{
+    display: none;
+    overflow: hidden;
+}
+#tablead{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    min-height: 100vh;
+    width: 100%;
+}
+.home{
+    width: 60px; 
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.logo{
+    height: 80px;
+    width:80px;
+    position:absolute;
+    margin:20px;
+}
+@media only screen and (min-width:1200px) {
+
+    #header img{
+        
+        margin-left: 150px;
+    }
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        
+        font-size: 1.3rem;
+    
+    }
+    #header .nav-list ul a:after{
+        display: none;
+    }
+   
+    .brand h1{
+        font-size:  1.5rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    .form-search{
+        margin-top: 20px;
+        margin-left: 650px;
+        display: inline-block;
+     }
+     .form-search .form-control{
+        width: 300px;
+        font-size: 1.1rem;
+    }
+    #tablead{
+        background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+        min-height: 100vh;
+        width: 100%;
+    }
+    #datatable tr:hover{
+        color: #fff;
+        background-color: rgb(153, 153, 155);
+     }
+     #datatable td{
+        font-weight: bold;
+        font-size: 1.3rem;
+     }
+     #datatable th{
+        font-size: 1.3rem;
+     }
+     .tlinks{
+      
+       
+        display: flex;
+        justify-content: left;
+      
+  
+    }
+    #datatable .votes, .stats ,.roles{
+        text-align: center;
+    }
+    .home{
+        width: 70px; 
+        height: 35px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .logo{
+        height: 80px;
+        width:80px;
+        position:absolute;
+        margin:20px;
+        margin-left: 120px;
+    }
+}
+@media only screen and (max-width:800px) {
+    #no-more-tables tbody,
+    #no-more-tables tr,
+    #no-more-tables td
+    {
+        display: block;
+    }
+    
+    #no-more-tables thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #no-more-tables td{
+        position: relative;
+        padding-left: 50%;
+       
+    }
+    #no-more-tables td:before{
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+       
+    }
+   
+    #datatable td{
+        font-weight: bold;
+     }
+     .form-search{
+        margin-left: 120px;
+        display: inline-block;
+     }
+     .container h1{ 
+        margin-bottom: 20px;
+     }
+     .tlinks{
+        display: flex;
+        justify-content: left;
+       
+    }
+    .form-search .form-control{
+        width: 220px;
+       
+    }
+    .home{
+        width: 60px; 
+        height: 30px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .logo{
+        height: 80px;
+        width:80px;
+        position:absolute;
+        margin:20px;
+    }
+}
+@media (max-width: 570px){ 
+ 
+
+.form-search{
+    margin-left: 125px;
+    display: inline-block;
+ }
+
+.form-search .form-control{
+      width: 115px;
+}
+.logo{
+    height: 80px;
+    width:80px;
+    margin:30px;
+     margin-left: 10px;
+
+}
+
+
+
+}

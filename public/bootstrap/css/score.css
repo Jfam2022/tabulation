@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'montserrant' sans-serif;
+    scroll-behavior: smooth;
+    
+}
+body{
+
+    margin: 0;
+    justify-content:center;
+    align-items:center;
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+}
+.alert {
+    position: absolute;
+    font-weight: 700;
+    color: crimson;
+   margin-bottom: 350px;
+   border: 2px solid crimson;
+   padding: 3px 6px;
+   margin-left:20px
+}
+h2{
+    text-transform: uppercase;
+    text-align: center;
+   padding-top:40px;
+    color: #FFF;
+  
+}
+h3{
+    text-transform: uppercase;
+    text-align: center;
+   padding-top:40px;
+    color: #FFF;
+  
+}
+
+  
+
+.container{
+    max-width:95%;
+   
+}
+
+  
+  h1{
+      display:absolute;
+  }
+a{
+    text-decoration: none;
+}
+#header .container{
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+}
+.brand h1{
+    font-size:  1.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*header section*/
+#header img{
+    width: 40px;
+    height: 40px;
+    margin-left: 150px;
+    
+}
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    
+}
+#header .header{
+    min-height: 10vh;
+    background-color: #df5d86;
+    transition: .3 ease background-color;
+    min-width: 100%;
+    
+   
+}
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+#header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: rgb(65, 55, 71);
+    width: 100vw;
+    height: 100vh;
+    opacity: .9;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5 ease left;
+  
+    
+}
+#header .nav-list ul.active{
+    left: 0;
+
+
+}
+
+#header .nav-list ul a{
+    margin-top:  20px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+
+}
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0); 
+    color: rgba(216, 218, 241, 0.678);
+    font-size: 7rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%,-50%)scale(1);
+    letter-spacing: initial;
+}
+#header .nav-list ul li:hover a{
+    color: black;
+}
+#header .hamburger {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+}
+#header .hamburger:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: humburger_puls 1s ease infinite;
+}
+#header .hamburger .bar{
+    height: 2px;
+    width: 28px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3 ease;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after{
+    top: 8px;
+}
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+#header .hamburger.active .bar::before{
+    bottom: 0;
+
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+.container1{
+    margin: 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:20px;
+    height: 483px;
+}
+
+.box{
+    margin-top: 1px;
+    height: 75vh;
+    border-radius: 6px;
+    position: relative;
+    background: #f5f3ed;
+    color:black;
+   
+   
+}
+
+.box .user-details{
+    max-height:350px;
+    overflow-y:scroll;
+  }
+  
+
+  .imgprof{
+    margin-top: 2px;
+    width: 180px;
+    height: 180px;
+    margin-left: 130px;
+
+}
+
+
+.editbtn1{
+    font-size: 1.6rem;
+    width: 200px;
+    margin-bottom:5px;
+    margin-left: 50px;
+    margin-top: 10px;
+    
+}
+.label{
+    color: crimson;
+}
+
+.user-details span{
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 1.6rem;
+  
+}
+.container1 .title{
+    font-size: 25px;
+    font-weight:500;
+    position:relative;
+  
+  }
+  .container1 .title::before{
+    content:'';
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background:#0d6efd;
+  }
+  
+  .containe1 form .user-details{
+      max-height:350px;
+      overflow-y:scroll;
+      width: 100%;
+    }
+  form .user-details .input-box{
+    margin-bottom: 5px;
+    width: 80%;
+  }
+  
+  .user-details .input-box input{
+    height: 35px;
+    width:100%;
+    outline:none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size:16px;
+    margin-left: 20px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+ 
+  .user-details .input-box input:focus,
+  .user-details .input-box input:valid{
+    border-color: #0d6efd;
+  
+  }
+  .user-details select{
+    margin-left: 20px;
+    font-size:16px;
+    font-weight: 600;
+  }
+  .editbtn2{
+    font-size: 1.6rem;
+    width: 200px;
+    margin-bottom:5px;
+    margin-left: 50px;
+  }
+  #datatable td{
+    font-weight: bold;
+    font-size: 1.3rem;
+ }
+ #datatable th{
+    font-size: 1.3rem;
+ }
+ #datatable{
+   margin-top: 5px;
+    
+ }
+ .msg {
+    position: absolute;
+    font-weight: 700;
+   font-size:1rem;
+   height: 30px;
+    color: crimson;
+   float: TOP;
+   border: 2px solid crimson;
+   padding: 3px 6px;
+   margin-left:10px;
+}
+.msg1 {
+    position: absolute;
+    font-weight: 700;
+   font-size:1rem;
+   height: 30px;
+    color: crimson;
+   float: TOP;
+   border: 2px solid crimson;
+   padding: 3px 6px;
+   margin-left:10px;
+   margin-top: 100px;
+}
+.editbtnsubmit{
+    font-size: 1.6rem;
+    width: 170px;
+    margin-bottom:25px;
+    margin-left: 130px;
+    
+}
+@keyframes humburger_puls {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    
+}
+@keyframes spin{
+    from {transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
+}
+.spinning{
+    animation: spin 3s infinite;
+}
+
+/*end keyframes*/
+/*media for tablets*/
+@media only screen and (max-width: 800px){
+
+    .imgprof{
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        margin-left: 80px;
+    transition: all 0.3s ease;
+
+    
+    }
+    .user-details span{
+        font-weight: bold;
+        margin-left: 50px;
+        font-size: 1.6rem;
+    transition: all 0.3s ease;
+
+    }
+    label{
+        margin-left: 1px;
+        margin-bottom: 20px;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+
+    }
+    #datatable td{
+        font-weight: 900;
+        font-size: .9rem;
+     }
+     #datatable th{
+        font-size: 1.1rem;
+     }
+     .msg {
+        position: absolute;
+        font-weight: 700;
+       font-size:1rem;
+        color: crimson;
+       float: TOP;
+       border: 2px solid crimson;
+       padding: 3px 6px;
+       margin-left:10px;
+       margin-top:122px;
+    }
+    h3{
+        text-transform: uppercase;
+        text-align: center;
+       padding-top:.5px;
+        color: #FFF;
+      
+    }
+    .editbtnsubmit{
+        font-size: 1.6rem;
+        width: 170px;
+        margin-bottom:25px;
+        
+    }
+  
+
+}
+@media only screen and (min-width:1200px) {
+
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        font-size: 1.3rem;
+    
+    }
+    #header .nav-list ul a:after{
+        display: none;
+    }
+  
+    
+    .brand h1{
+        font-size:  2rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    #header img{
+        margin-left: 210px;
+    }
+   /*contact section*/
+   .editbtn1{
+    font-size: 1.6rem;
+    width: 200px;
+    margin-bottom:5px;
+    margin-left: 50px;
+    
+}
+
+
+label{
+    font-weight:700;
+    margin-left: 180px;
+    font-size: 1.5rem;
+   
+}
+
+.imgprof{
+    width: 200px;
+    height: 160px;
+    margin-left: 210px;
+
+}
+.msg {
+  
+   margin-top:125px;
+}
+.editbtnsubmit{
+  
+    margin-left: 230px;
+    
+}
+
+   
+}
+@media only screen and (max-width: 570px){
+
+    .imgprof{
+        margin-top: 10px;
+        width: 180px;
+        height: 180px;
+        margin-left: 100px;
+    }
+    .box .user-details{
+        max-height:370px;
+        overflow-y:hidden;
+      }
+      label{
+        margin-left: 1px;
+        margin-bottom: 10px;
+    font-size: 2rem;
+    }
+    .box{
+        height: 65vh;
+    }
+    .container1{
+        display:grid;
+        grid-gap:100px;
+    }
+    .brand h1{
+        font-size:  .9rem;
+    }
+    #header img{
+        margin-left: 90px;
+    }
+    .editbtn1{
+        margin-left:50px;
+    }
+    .user-details span{
+        font-weight: bold;
+        margin-left: 20px;
+        font-size: 1.6rem;
+      
+    }
+
+
+}
+    
+ 
+ 
+

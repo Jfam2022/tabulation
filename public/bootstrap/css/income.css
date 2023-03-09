@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'montserrant' sans-serif;
+    scroll-behavior: smooth;
+    
+}
+.container h1{
+    text-align: center;
+    color:#fff;
+}
+table img{
+    height: 40px;
+    width: 40px;
+}
+.form-search{
+    margin-left: 380px;
+    display: inline-block;
+ }
+ .form-search .form-control{
+    width:200px;
+    font-size: 1.1rem;
+    transition: 1.8s ease-in-out;
+}
+.form-search button{
+    width: 80px;
+    height: 25px;
+    font-weight: bold;
+}
+
+.w-5{
+    display: none;
+    overflow: hidden;
+}
+#tablead{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    min-height: 100vh;
+    width: 100%;
+}
+.home{
+    width: 60px; 
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.logo{
+    height: 80px;
+    width:80px;
+    position:absolute;
+    margin:20px;
+    margin-top:150px;
+}
+
+.form-floating label{
+    font-size: 13px;
+    font-weight: 900;
+    color:  black;
+  
+   
+     
+}
+.form-floating input{
+    width:350px;
+    font-weight: 900;
+    font-size:16px;
+    min-height: 50px;
+    min-height: 50px;
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+  border: 2px solid crimson;
+}
+.form-floating{
+    height: 30px; 
+   
+}
+thead{
+    background-image: linear-gradient(rgba(41, 17, 29, 0.7),rgb(58, 51, 9));
+}
+.addform{
+    background:#d9d9d9;
+}
+.modal-body input{
+    font-size: 2rem;
+}
+.modal-body option{
+    font-size: 2rem;
+}
+.modal-body select{
+    font-size: 2rem;
+}
+.details1{
+    font-size: 2rem;
+}
+.modal-header img{
+    width: 30px;
+    height: 30px;
+}
+.modal-header{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    font-weight: bolder;
+}
+thead tr:hover{
+    color: #fff;
+    background-image: linear-gradient(rgba(41, 17, 29, 0.7),rgb(58, 51, 9));
+}
+@media only screen and (min-width:1200px) {
+
+    #header img{
+        
+        margin-left: 150px;
+    }
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        
+        font-size: 1.3rem;
+    
+    }
+    #header .nav-list ul a:after{
+        display: none;
+    }
+   
+    .brand h1{
+        font-size:  1.5rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    .form-search{
+        margin-left: 750px;
+        display: inline-block;
+     }
+     .form-search .form-control{
+        width: 200px;
+        font-size: 1.1rem;
+        transition: 1.8s ease-in-out;
+    }
+    #tablead{
+        background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+        min-height: 100vh;
+        width: 100%;
+    }
+    #datatable tr:hover{
+        color: #fff;
+        background-color: rgb(153, 153, 155);
+     }
+     #datatable td{
+        font-weight: bold;
+        font-size: 1.3rem;
+     }
+     #datatable th{
+        font-size: 1.3rem;
+     }
+     .tlinks{
+      
+       
+        display: flex;
+        justify-content: left;
+      
+  
+    }
+    #datatable .votes, .stats ,.roles{
+        text-align: center;
+    }
+    .home{
+        width: 70px; 
+        height: 35px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .logo{
+        height: 80px;
+        width:80px;
+        position:absolute;
+        margin:20px;
+    }
+   
+}
+@media only screen and (max-width:800px) {
+    #no-more-tables tbody,
+    #no-more-tables tr,
+    #no-more-tables td
+    {
+        display: block;
+    }
+    
+    #no-more-tables thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #no-more-tables td{
+        position: relative;
+        padding-left: 40%;
+       
+    }
+    #no-more-tables td:before{
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+       
+    }
+   
+    #datatable td{
+        font-weight: bold;
+     }
+     .form-search{
+        margin-left: 120px;
+        display: inline-block;
+     }
+     .container h1{ 
+        margin-bottom: 20px;
+     }
+     .tlinks{
+        display: flex;
+        justify-content: left;
+       
+    }
+    .form-search .form-control{
+        width: 200px;
+       
+        transition: 1.8s ease-in-out;
+    }
+    .home{
+        width: 60px; 
+        height: 30px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .logo{
+        height: 80px;
+        width:80px;
+        position:absolute;
+        margin:20px;
+    }
+    .form-floating{
+        margin-left:100px; 
+        margin-bottom: 20px;
+    }
+    .form-floating input{
+        width:250px;
+        font-weight: 900;
+        font-size:16px;
+        min-height: 50px;
+        min-height: 50px;
+    }
+    #datatable {
+        font-weight: BOLDER;
+        font-size: 1.2rem;
+     }
+    
+}
+@media only screen and (max-width: 570px){
+
+    .form-floating input{
+        width:240px;
+        font-weight: 900;
+        font-size:16px;
+        min-height: 50px;
+        min-height: 50px;
+    }
+    .form-floating{
+        height: 20px; 
+       
+    }
+    .form-search .form-control{
+        width: 150px;
+       
+        transition: 1.8s ease-in-out;
+    }
+    .form-search{
+        margin-left: 80px;
+     }
+     #no-more-tables td{
+        position: relative;
+        padding-left: 37%;
+       
+    }
+    #datatable {
+        font-weight: BOLDER;
+        font-size: 1.2rem;
+     }
+    
+}

@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'montserrant' sans-serif;
+    scroll-behavior: smooth;
+    
+}
+a{
+    text-decoration: none;
+}
+.container1{
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+}
+
+p{
+    
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+.section-title span{
+    color: #0d6efd;
+}
+
+
+
+.brand h1{
+    font-size:  1.2rem;
+    text-transform: uppercase;
+    color: white;
+}
+.brand h1 span{
+    color: white;
+}
+#tablead h1{
+    color: white;
+}
+/*header section*/
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    
+}
+#header .header{
+    min-height: 10vh;
+    background-color: #df5d86;
+    transition: .3 ease background-color;
+    min-width: 100%;
+    
+   
+}
+#header img{
+    width: 40px;
+    height: 40px;
+    margin-left: 100px;
+}
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+#header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: rgb(65, 55, 71);
+    width: 100vw;
+    height: 100vh;
+    opacity: .9;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5 ease left;
+    
+}
+#header .nav-list ul.active{
+    left: 0;
+
+
+}
+
+#header .nav-list ul a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+
+}
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0); 
+    color: rgba(216, 218, 241, 0.678);
+    font-size: 7rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%,-50%)scale(1);
+    letter-spacing: initial;
+}
+#header .nav-list ul li:hover a{
+    color: black;
+}
+#header .hamburger {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+}
+#header .hamburger:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: humburger_puls 1s ease infinite;
+}
+#header .hamburger .bar{
+    height: 2px;
+    width: 28px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3 ease;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after{
+    top: 8px;
+}
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+#header .hamburger.active .bar::before{
+    bottom: 0;
+
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+
+
+#tablead h1{
+    text-align: center;
+    margin-top: 20px;
+}
+#no-more-tables img{
+    height: 300px;
+    width: 220px;
+}
+
+.w-5{
+    display: none;
+    overflow: hidden;
+}
+#tablead{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    min-height: 120vh;
+
+}
+thead{
+    background-image: linear-gradient(rgba(41, 17, 29, 0.7),rgb(58, 51, 9));
+}
+
+.addform{
+    background:#d9d9d9;
+}
+#exampleModal1{
+    margin-top: 50px;
+}
+#exampleModal {
+    margin-top: 50px;
+}
+.modal-body input{
+    font-size: 2rem;
+}
+.modal-body option{
+    font-size: 2rem;
+}
+.modal-body select{
+    font-size: 2rem;
+}
+.details1{
+    font-size: 2rem;
+}
+.modal-header img{
+    width: 30px;
+    height: 30px;
+}
+.modal-header{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    font-weight: bolder;
+}
+
+#no-more-tables tbody,
+#no-more-tables tr,
+#no-more-tables td
+{
+    display: block;
+   
+}
+
+#no-more-tables thead tr{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+ 
+    
+}
+#no-more-tables td{
+    position: relative;
+    padding-left: 30%;
+    font-weight: 900;
+   
+}
+#no-more-tables td:before{
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+   
+} 
+
+
+.container{
+   
+    max-width:95%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:20px;
+    
+
+}
+.box{
+    height: 70vh;
+    border-radius: 6px;
+    position: relative;
+    background: #f5f3ed;
+    color:black;
+    margin-top: 10px;
+
+}
+.alert {
+    position: absolute;
+    font-weight: 700;
+   font-size:1rem;
+    color: crimson;
+   float: TOP;
+   border: 2px solid crimson;
+   padding: 3px 6px;
+   margin-left:160px;
+   margin-top:40px;
+}
+
+.title{
+   
+    text-align: center;
+    font-weight: 500;
+    font-size:18px;
+}
+
+ 
+
+  .container form .user-details{
+    max-height:380px;
+    overflow-y:scroll;
+   
+  }
+ 
+
+#tablead .btnadd{
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 1.4rem;
+  }
+
+ #hero1{
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(204,177,0),rgba(199, 62, 131, 0.7));
+    z-index: -1;
+}
+
+#hero1 .container h3{
+    font-weight: 900;
+    line-height: 1.2;
+   
+  
+   
+}
+.logopage img{
+    width: 100px;
+    height: 100px;
+   
+}
+
+#hero1 h4{
+ 
+    font-weight: 800;
+    line-height: 1;
+   
+   
+    color: crimson;
+    font-size: 18px;
+    margin-bottom: 20px;
+   
+    
+}
+
+#no-more-tables1 img{
+    height: 50px;
+    width: 50px;
+}
+
+#tablead1 h1{
+    color: white;
+text-align: center;
+}
+#tablead1{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    min-height: 120vh;
+
+}
+
+ .btnadd1{
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+  .editbtn2{
+    margin-left: 10px;
+    margin-top: 15px;
+   padding:10px;
+    font-size: 1.4rem;
+  }
+ 
+
+@keyframes humburger_puls {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    
+}
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: #0d6efd;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    #header img{
+        
+        margin-left: 150px;
+    }
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        
+        font-size: 1.3rem;
+    
+    }
+    #header .nav-list ul a:after{
+        display: none;
+    }
+   
+    .brand h1{
+        font-size:  1.5rem;
+        text-transform: uppercase;
+        color: white;
+    }
+   
+    
+    #tablead{
+        background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+        min-height: 100vh;
+        width: 100%;
+    }
+    thead tr:hover{
+        color: #fff;
+        background-image: linear-gradient(rgba(41, 17, 29, 0.7),rgb(58, 51, 9));
+    }
+   
+     #datatable td{
+        font-weight: 700;
+        font-size: 1.3rem;
+     }
+     #datatable th{
+        font-size: 1.3rem;
+       
+     }
+    
+    .btnadd{
+        width: 150px;
+        height: 40px;
+        margin-top: 30px;
+        font-size: 1.4rem;
+     
+    }
+    .p-5 h3{
+        color: #fff;
+    }
+    #datatable{
+        width: 100%;
+        border: 2px solid black;
+     
+       
+    }
+    #tablead1{
+        background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+        min-height: 100vh;
+        width: 100%;
+    }
+    #tablead .btnadd{
+        position: absolute;
+        margin-left: 10px;
+      }
+   
+  
+  
+}
+@media only screen and (max-width:800px) {
+    #no-more-tables tbody,
+    #no-more-tables tr,
+    #no-more-tables td
+    {
+        display: block;
+        transition: 2s ease-in-out;
+    }
+    
+    #no-more-tables thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #no-more-tables td{
+        position: relative;
+        padding-left: 50%;
+       
+    }
+    #no-more-tables td:before{
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bolder;
+        font-size: 1.2rem;
+       
+    }
+  
+    #datatable td{
+        font-weight: bolder;
+        font-size: 1.5rem;
+     }
+     
+   
+   
+    #datatable img{
+        height: 120px;
+        width: 100px;
+    }
+   
+    
+    #tablead{
+        background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+        min-height: 100vh;
+    
+    }
+   
+     #tablead .btnadd{
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 35px;
+        width: 150px;
+        height: 40px;
+        font-size: 1.4rem;
+      }
+      .container{
+   
+        max-width:95%;
+        display:grid;
+        grid-template-columns: none;
+        grid-gap:20px;
+        
+    
+    }
+#no-more-tables1 tbody,
+#no-more-tables1 tr,
+#no-more-tables1 td
+{
+    display: block;
+   
+}
+
+#no-more-tables1 thead tr{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+ 
+    
+}
+#no-more-tables1 td{
+    position: relative;
+    padding-left: 30%;
+    font-weight: 900;
+   
+}
+#no-more-tables1 td:before{
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+    font-size: 1.5rem;
+   
+} 
+#datatable {
+    width: 100%;
+}
+#tablead1{
+    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+    min-height: 100vh;
+
+}
+
+ #tablead1 .btnadd{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 35px;
+    width: 150px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+ 
+}
+ @media only screen and (max-width: 570px){
+
+      
+        #tablead{
+          
+            min-height: 180vh;
+        
+        }
+        #no-more-tables1 tbody,
+        #no-more-tables1 tr,
+        #no-more-tables1 td
+        {
+            display: block;
+           
+        }
+        
+        #no-more-tables1 thead tr{
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+         
+            
+        }
+        #no-more-tables1 td{
+            position: relative;
+            padding-left: 20%;
+            font-weight: 600;
+         font-size: 1.2rem;
+
+           
+        }
+        #no-more-tables1 td:before{
+            content: attr(data-title);
+            position: absolute;
+            left: 3px;
+            font-weight: bold;
+         font-size: 1rem;
+
+           
+        } 
+        #tablead1{
+           
+            min-height: 100vh;
+        
+        }
+     
+        #tablead1 h1{
+        margin-top: 20px;
+        }
+        #tablead1 .btnadd1{
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 15px;
+            width: 150px;
+            height: 40px;
+            font-size: 1.4rem;
+          }
+          #tablead .btnadd{
+            margin-top: 60px;
+            margin-left: 10px;
+          }
+          .editbtn2{
+            margin-left: 10px;
+            margin-top: 15px;
+           padding:5px;
+            font-size: 1rem;
+          }
+          
+          .logopage img{
+            width: 80px;
+            height: 80px;
+            margin-top: 20px;
+           
+        }
+        .brand h1{
+            font-size:  1rem;
+          
+        }
+        #header img{
+           
+            margin-left: 100px;
+        }
+        }    
+  
+        
+
