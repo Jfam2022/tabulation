@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('optionc')->default('NO RECORDS');
             $table->integer('agec')->default(0);
             $table->integer('vpointsc')->default(0);
-            $table->integer('vscores')->default(0);
+            $table->DECIMAL('vscores')->default(0);
             $table->timestamps();
         });
     }

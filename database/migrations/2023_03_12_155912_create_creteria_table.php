@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('creterias', function (Blueprint $table) {
             $table->id();
             $table->string('creteria');
-            $table->integer('percent')->default(0);
-            $table->integer('scores')->default(0);
+            $table->DECIMAL('percent')->default(0);
+            $table->DECIMAL('scores')->default(0);
             $table->string('cricandidates');
             $table->string('judgename');
             $table->string('critag');
@@ -29,8 +29,8 @@ return new class extends Migration
             $table->string('crioldoptiona');
             $table->string('crioldoptionb');
             $table->string('crioldoptionc');
-            $table->integer('numberoption')->default(0);
-            $table->integer('numberoption1')->default(0);
+            $table->DECIMAL('numberoption')->default(0);
+            $table->DECIMAL('numberoption1')->default(0);
             $table->integer('numberoption2')->default(0);
             $table->integer('numberoption3')->default(0);
             $table->timestamps();

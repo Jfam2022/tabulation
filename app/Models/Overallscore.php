@@ -10,4 +10,3 @@ class Overallscore extends Model
     use HasFactory;
     public $timestamps=false;
 }
-

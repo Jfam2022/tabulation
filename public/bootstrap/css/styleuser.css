@@ -588,7 +588,7 @@ form .button input{
         
     }
     .user-details{
-        max-height:428px;
+        max-height:328px;
         overflow-y:scroll;
        
       }
@@ -680,7 +680,7 @@ form .button input{
         color: crimson;
     }
 }
-@media only screen and (max-device-width: 570px){
+@media only screen and (max-width: 570px){
     .navigate{
         font-weight:900;
         font-size: 1.5rem;
@@ -717,7 +717,7 @@ form .button input{
     }
    
      .user-details{
-        max-height:378px;
+        max-height:358px;
         overflow-y:scroll;
        
       }
@@ -812,31 +812,43 @@ form .button input{
   
 
 }
-@media screen and (min-device-width: 320px)
+@media screen and (max-device-width: 320px)
 and (-webkit-min-device-pixel-ratio: 2) {
     .box{
         margin-left: 10px;
-        height: 98vh;
+        height: 95vh;
 
-        border-radius: 6px;
-        position: relative;
-        background: #f5f3ed;
         width: 95%;
         margin-bottom: 20px;
-        transition: 2s ease-in-out;
 
     }
     .box1{      
-        height: 98vh;
-
-        border-radius: 6px;
-        position: relative;
-        background: #f5f3ed;
+        height: 95vh;
         width: 95%;
         margin-bottom: 40px;
         margin-left: 10px;
-        transition: 2s ease-in-out;
+    }
+    .brand h1 {
+        font-size:  .7rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    #header img{
+        margin-left: 70px;
+    }
+    .user-details input{
+        margin-left: 20px;
+        font-weight: 600;
+        font-size: 1.1rem;
 
+    } 
+    form .button input{
+        margin-left:90px;
+      }
+   
+    .upload img{
+        height: 100px;
+        width: 100px;
     }
 }
 /*end media for tablets*/

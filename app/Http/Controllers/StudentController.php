@@ -239,6 +239,8 @@ $males = Tabulation::where('gender', '=', "MALE")
           $data-> currentc= "TOP 5";
           $announce = Announcement::find(1);
           $announce ->anountags4 = "CLOSE VOTING";
+          $data ->vscores = 0;
+
           $announce->save();
           
           $data->save();
@@ -437,9 +439,16 @@ $males = Tabulation::where('gender', '=', "MALE")
          ->where('eventc', '=', $event)
          ->where('currentc', '=', $category)->paginate(1);
          $scores = Score::all();
-  
+         $countingFEMALE = Overallscore::where('overalltags', '=', $event )
+          ->where('overalltags1', '=', $category)
+          ->where('overalltags3', '=', "FEMALE")
+          ->where('namejudge', '=',$data->Name)->count();
+          $countingMALE = Overallscore::where('overalltags', '=', $event )
+          ->where('overalltags1', '=', $category)
+          ->where('overalltags3', '=', "MALE")
+          ->where('namejudge', '=',$data->Name)->count();
         }
-             return view('judgegetcandidates',compact('data','females','scores','announcement','males'));
+             return view('judgegetcandidates',compact('data','females','scores','announcement','males','countingFEMALE','countingMALE'));
          }
          public function givescore($id)
          {

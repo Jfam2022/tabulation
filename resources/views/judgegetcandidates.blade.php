@@ -53,7 +53,7 @@
    
     <div class="box">
     <div class="title">FEMALE CANDIDATE</div>
-      
+      <h3 style="text-align:center; color:crimson">COUNT: {{$countingFEMALE}}</h3>
     <form method="post" class="join">
                 @csrf
         <div class="user-details">
@@ -102,6 +102,7 @@
 <!-- start maleeeesss asdddddddddddddddddddddddddddddd-->
     <div class="box">
     <div class="title">MALE CANDIDATE</div>
+    <h3 style="text-align:center; color:crimson">COUNT: {{$countingMALE}}</h3>
 
     <form method="post" class="join">
                 @csrf

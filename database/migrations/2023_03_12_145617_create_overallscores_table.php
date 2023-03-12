@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('namejudge');
             $table->string('namecandidates');
-            $table->integer('percentscores')->default(0);
+            $table->DECIMAL('percentscores')->default(0);
             $table->integer('overscores')->default(0);
             $table->integer('overscores1')->default(0);
             $table->integer('overscores2')->default(0);

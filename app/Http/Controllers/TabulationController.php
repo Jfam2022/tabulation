@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Tabulation;
@@ -480,17 +479,17 @@ public function getwinner(Request $request)
       
     $femalesvote = Tabulation::where('gender', '=', "FEMALE")
       ->where('eventc', '=', $event)
+    ->max('vpointsc');
+
+    $malesvote = Tabulation::where('gender', '=', "MALE")
+   ->where('eventc', '=', $event)
   ->max('vpointsc');
-
-  $malesvote = Tabulation::where('gender', '=', "MALE")
-  ->where('eventc', '=', $event)
-->max('vpointsc');
   
-$females = Tabulation::where('gender', '=', "FEMALE")
-->where('eventc', '=', $event)
-->where('vpointsc',$femalesvote)->paginate(1);
+    $females = Tabulation::where('gender', '=', "FEMALE")
+  ->where('eventc', '=', $event)
+  ->where('vpointsc',$femalesvote)->paginate(1);
 
-$males = Tabulation::where('gender', '=', "MALE")
+  $males = Tabulation::where('gender', '=', "MALE")
    ->where('eventc', '=', $event)
    ->where('vpointsc',$malesvote)->paginate(1);
 
@@ -893,4 +892,3 @@ if($limitentrymale ==1 ){
 
  }
  
-
