@@ -505,7 +505,7 @@ $males = Tabulation::where('gender', '=', "MALE")
 
           $totaljudgepass = $creteris + $score->percentscores;
 
-            if($req->judgescore <= 0 || $totaljudgepass > 100 || $req->judgescore > 100){
+            if($req->judgescore <= 75 || $totaljudgepass > 100 || $req->judgescore > 100){
             return back()->with('fail','CHECK YOUR SCORES');
             }else{
 
@@ -546,7 +546,7 @@ $males = Tabulation::where('gender', '=', "MALE")
 
         }else{
           
-          if($req->judgescore <= 0 || $req->judgescore > 100){
+          if($req->judgescore <= 75  || $req->judgescore > 100){
             return back()->with('fail','WARNING CHECK YOUR SCORE!!');
 
             }else{

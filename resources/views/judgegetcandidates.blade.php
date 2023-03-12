@@ -85,8 +85,8 @@
        
       @endforeach
       @else
-      <tr>
-        <td  colspan= "3">NO CANDIDATES</td>
+      <tr  >
+        <td   colspan= "32">NO CANDIDATES</td>
       </tr>
       @endif
         </table>

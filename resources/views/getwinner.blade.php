@@ -111,7 +111,7 @@
          
           <td class="EVENT" data-title="EVENT:">{{$voteswinnerF['eventc']}}</td>
 
-          <td style="color:crimson;  font-weight: 900; font-size:2rem;"  class="TAGS" data-title="TAGS:">{{$voteswinnerF['currentc']}}</td>
+          <td style="color:crimson;  font-weight: 900; font-size:1.2rem;"  class="TAGS" data-title="TAGS:">PEOPLE CHOICE WINNER</td>
         
         </tr>
         </tbody>
@@ -190,13 +190,15 @@
       @if(count($voteswinnerMs) > 0)
                @foreach($voteswinnerMs as $voteswinnerMs) 
             <tbody>
+              
                 <tr>
+                  
         <td  data-title="NAME:">{{$voteswinnerMs['namecan']}}</td>
          
           <td class="CANDIDATE" data-title="CANDIDATE:"> {{$voteswinnerMs['candino']}}</td>
          
           <td class="EVENT" data-title="EVENT:">{{$voteswinnerMs['eventc']}}</td>
-          <td style="color:crimson;  font-weight: 900; font-size:2rem;"  class="TAGS" data-title="TAGS:">{{$voteswinnerMs['currentc']}}</td>
+          <td style="color:crimson;  font-weight: 900; font-size:1.2rem;"  class="TAGS" data-title="TAGS:">PEOPLE CHOICE WINNER</td>
         
         </tr>
         </tbody>
