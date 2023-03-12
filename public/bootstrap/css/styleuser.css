@@ -680,7 +680,7 @@ form .button input{
         color: crimson;
     }
 }
-@media only screen and (max-width: 570px){
+@media only screen and (max-device-width: 570px){
     .navigate{
         font-weight:900;
         font-size: 1.5rem;
@@ -812,5 +812,31 @@ form .button input{
   
 
 }
+@media screen and (min-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .box{
+        margin-left: 10px;
+        height: 98vh;
 
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        margin-bottom: 20px;
+        transition: 2s ease-in-out;
+
+    }
+    .box1{      
+        height: 98vh;
+
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        margin-bottom: 40px;
+        margin-left: 10px;
+        transition: 2s ease-in-out;
+
+    }
+}
 /*end media for tablets*/

@@ -20,9 +20,8 @@ use App\Http\Controllers\MailController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/ ', function () {
-    return view('welcome');
-});
+Route::get('/',[AnnouncementController::class,'home']);
+
 Route::get('/send-email',[MailController::class,'sendEmail'])->name('send-email');
 
 Route::get('/admin',[StudentController::class,'admin'])->middleware('alreadyLoggedIn');
@@ -37,7 +36,6 @@ Route::get('/masterminors',[StudentController::class,'masterminors'])->middlewar
 
 //announcement controller;
 
-Route::get('/home',[AnnouncementController::class,'home']);
 Route::get('/announcement',[AnnouncementController::class,'announcement'])->middleware('alreadyLoggedIn');
 Route::put('update-announcement/{id}',[AnnouncementController::class,'updateannoncement']);
 
