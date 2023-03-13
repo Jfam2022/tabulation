@@ -213,13 +213,20 @@ class TabulationController extends Controller
 public function dashviewcandi(Request $request)
 {
 
+  $announcement = Announcement::find(1);
+  $event= $announcement->event1;
+  
+  if($announcement->anountags4=="CLOSE VOTING"){
+    return back()->with('fail','VOTING IS OFFICIALLY CLOSE');
 
+
+  }else{
   $females = Tabulation::where('gender', '=', "FEMALE")->paginate(12);
   $males = Tabulation::where('gender', '=', "MALE")->paginate(12);
 
     return view('dashviewcandi', compact('females','males'));
 
-
+  }
 } 
 
 public function adminoldcandidates(Request $request)
@@ -236,10 +243,16 @@ public function adminoldcandidates(Request $request)
 
 public function votenow(Request $request)
 {
+  
   $announcement = Announcement::find(1);
   $event= $announcement->event1;
   
   $category= $announcement->anountags1;
+  if($announcement->anountags4=="CLOSE VOTING"){
+    return back()->with('fail','VOTING IS OFFICIALLY CLOSE');
+
+
+  }else{
   if($announcement->anountags3=="MR AND MS INTRAMS"){
     return back()->with('fail','VOTING IS CLOSE THE EVENT IS MR AND MS INTRAMS');
 
@@ -253,6 +266,7 @@ public function votenow(Request $request)
      ->where('currentc', '=', $category )->paginate(20);
      return view('votenow', compact('females','males'));
     }
+  }
 } 
 public function addvote($id){
   $vote= Tabulation::find($id);
@@ -722,18 +736,22 @@ if($limitentrymale ==1 ){
    $data-> vscores;
 
   
+   if($data->vscores <=70){
+    return back()->with('fail','CHECK THE JUDGE IF THEY SUBMITTED THEIR SCORES');
+   }else{
+
    
    if( $announcement-> anountags3=="MR AND MS INTRAMS" && $announcement->anountags1 =="NO RECORDS" ){
     $countverifiyf3 = Tabulation::where('eventc', '=', $event )
-    ->where('gender', '=', "FEMALE")
-    ->where('optionb', '=', "NO RECORDS")->max('vscores');
+     ->where('gender', '=', "FEMALE")
+     ->where('optionb', '=', "NO RECORDS")->max('vscores');
 
      $countverifiym3 = Tabulation::where('eventc', '=', $event )
      ->where('gender', '=', "MALE")
      ->where('optionb', '=', "NO RECORDS")->max('vscores');
 
      $femalewinner = Tabulation::where('eventc', '=', $event )
-   ->where('gender', '=', "FEMALE")
+     ->where('gender', '=', "FEMALE")
      ->where('optionb', '=', $event)->count();
      $firstfemale = Tabulation::where('eventc', '=', $event )
      ->where('gender', '=', "FEMALE")
@@ -887,8 +905,7 @@ if($limitentrymale ==1 ){
 
     
    }
-
+  }
  
-
  }
  

@@ -286,39 +286,6 @@ a{
 
 /*end keyframes*/
 /*media for tablets*/
-@media only screen and (max-width: 800px){
-
-    #datatable {
-        margin-left: 10px;
-     }
-     .imgprof{
-        width: 150px;
-        height: 150px;
-    }
-    .box{
-        margin-top: 5px;
-        height: 69vh;
-        border-radius: 6px;
-        position: relative;
-        background: #f5f3ed;
-       
-       
-    }
-    .brand h1{
-        font-size:  .9rem;
-    }
-    #header img{
-        margin-left: 90px;
-        
-    }
-    .title{
-        text-align: center;
-        font-size: 1.4rem;
-        font-weight: 500;
-    }
-  
-
-}
 @media only screen and (max-width: 570px){
     #datatable {
         margin-left: 1px;
@@ -353,6 +320,40 @@ a{
         font-weight: 500;
     }
 }
+@media only screen and (max-width: 800px){
+
+    #datatable {
+        margin-left: 10px;
+     }
+     .imgprof{
+        width: 150px;
+        height: 150px;
+    }
+    .box{
+        margin-top: 5px;
+        height: 69vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+       
+       
+    }
+    .brand h1{
+        font-size:  .9rem;
+    }
+    #header img{
+        margin-left: 90px;
+        
+    }
+    .title{
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+  
+
+}
+
 @media only screen and (min-width:1200px) {
 
     #header .hamburger{
