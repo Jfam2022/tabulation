@@ -286,7 +286,7 @@ public function castvote(Request $request, $id){
       return back()->with('fail','VOTING IS CLOSE');
     }else{
       if($data->vote < $request->vpointsc || $request->vpointsc <= 0 ){
-        return back()->with('fail','SORRY REQUEST DENIED CHECK YOUR LOAD/YOUR NUMBER ENTERED');
+        return back()->with('fail','REQUEST DENIED CHECK YOUR LOAD/YOUR NUMBER ENTERED');
       }else{
 
        $minusan = $data->vote - $request->vpointsc;
@@ -536,6 +536,7 @@ $males = Tabulation::where('gender', '=', "MALE")
       $counttopf = Tabulation::where('eventc', '=', $event )
       ->where('gender', '=', "FEMALE")
       ->where('currentc', '=', "TOP 5")->count();
+      
       $counttopm = Tabulation::where('eventc', '=', $event )
       ->where('gender', '=', "MALE")
       ->where('currentc', '=', "TOP 5")->count();
@@ -587,6 +588,11 @@ $males = Tabulation::where('gender', '=', "MALE")
                  }else{
                     return back()->with('fail','Something wrong');
                   }
+                }
+                if($data){
+                  return back()->with('success','INFORMATION!! TOP 5');
+               }else{
+                  return back()->with('fail','Something wrong');
                 }
      }else{
           return back()->with('fail','PLEASE CHOOSE THE FIRST ONE OR THE TOP 5 IS COMPLETED');

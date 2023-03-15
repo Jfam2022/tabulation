@@ -277,7 +277,7 @@ table{
 }
 
  .user-details{
-    max-height:378px;
+    max-height:358px;
     overflow-y:scroll;
    
   }
@@ -300,9 +300,15 @@ table{
     width: 70px;
 }
 
+
 /*end keyframes*/
 /*media for tablets*/
-@media only screen and (max-width: 800px){
+@media only screen and (max-device-width: 800px){
+    .user-details{
+        max-height:458px;
+        overflow-y:scroll;
+       
+      }
     .brand h1 {
         font-size:  1rem;
         text-transform: uppercase;
@@ -310,8 +316,7 @@ table{
     }
 
     table{
-        max-width: 93%;
-
+        max-width: 90%;
         margin-left: 27px;
         font-weight: 700;
         margin-top: 10px;
@@ -325,7 +330,20 @@ table{
         height: 100px;
         width: 100px;
     }
-
+    .box{
+        height: 88vh;
+        margin-bottom: 20px;
+    }
+    .box1{
+        height: 88vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        margin-bottom: 40px;
+        margin-left: 15px;
+    }
+ 
    /*end contact section*/
 
 
@@ -396,7 +414,7 @@ table{
         
     }
     .user-details{
-        max-height:458px;
+        max-height:400px;
         overflow-y:scroll;
        
       }
@@ -424,13 +442,9 @@ table{
         max-width: 90%;
         margin-left: 40px;
     }
- 
- 
-
-  
-    
 }
-@media only screen and (max-width: 570px){
+@media only screen and (min-device-width: 270px) and (max-device-width: 570px) {
+
     .box{
         margin-left: 10px;
         height: 68vh;
@@ -456,9 +470,66 @@ table{
         margin-top: 10px;
 
     }
+         .user-details{
+        max-height:290px;
+        overflow-y:scroll;
+       
+      }
+    
+   
+      .title{
+        text-align: center;
+         font-weight: 500;
+         font-size:18px;
+     }
+     .totalvotes{
+        color: crimson;
+        font-weight: 700;
+     }
+     .brand h1 {
+        font-size:  .9rem;
+        text-transform: uppercase;
+        color: white;
+    }
+    #no-more-tables img{
+        height: 70px;
+        width: 70px;
+    }
+ 
+  
+  
+
+}
+@media screen and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .box{
+        margin-left: 2px;
+        height: 78vh;
+        border-radius: 2px;
+        position: relative;
+        background: #f5f3ed;
+        width: 98%;
+        margin-bottom: 20px;
+    }
+    .box1{      
+        height: 78vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 98%;
+        margin-bottom: 40px;
+        margin-left: 2px;
+    }
+   
+    table{
+        margin-left: 10px;
+        font-weight: 500;
+        margin-top: 10px;
+
+    }
     
      .user-details{
-        max-height:378px;
+        max-height:290px;
         overflow-y:scroll;
        
       }
@@ -471,22 +542,19 @@ table{
         color: crimson;
         font-weight: 700;
      }
-     .brand h1 {
-        font-size:  1rem;
-        text-transform: uppercase;
-        color: white;
-    }
+   
     #no-more-tables img{
-        height: 70px;
-        width: 70px;
+        height: 50px;
+        width: 50px;
     }
     .brand h1 {
-        font-size:  .9rem;
+        font-size:  .8rem;
      
     }
-  
-
-
+    #header img{
+       
+        margin-left: 70px;
+    }
 }
 
 /*end media for tablets*/

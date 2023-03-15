@@ -10,22 +10,28 @@ html{
     scroll-behavior: smooth;
     
 }
+@keyframes spin{
+    from {transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
+}
+.spinning{
+    animation: spin 3s infinite;
+}
 .container h1{
     text-align: center;
     color:#fff;
 }
 table img{
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 .form-search{
-    margin-left: 380px;
+    margin-left: 680px;
     display: inline-block;
  }
  .form-search .form-control{
-    width:200px;
+    width: 150px;
     font-size: 1.1rem;
-    transition: 1.8s ease-in-out;
 }
 .form-search button{
     width: 80px;
@@ -47,15 +53,16 @@ table img{
     height: 30px;
     font-size: 15px;
     font-weight: 500;
+    margin-top: 30px;
+
 }
+
 .logo{
     height: 80px;
     width:80px;
     position:absolute;
-    margin:20px;
-    margin-top:150px;
+    margin:10px;
 }
-
 .form-floating label{
     font-size: 13px;
     font-weight: 900;
@@ -65,50 +72,24 @@ table img{
      
 }
 .form-floating input{
-    width:350px;
+    width:280px;
     font-weight: 900;
     font-size:16px;
-    min-height: 50px;
-    min-height: 50px;
+    height: 30px; 
     background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
   border: 2px solid crimson;
-}
-.form-floating{
-    height: 30px; 
-   
-}
-thead{
-    background-image: linear-gradient(rgba(41, 17, 29, 0.7),rgb(58, 51, 9));
-}
-.addform{
-    background:#d9d9d9;
-}
-.modal-body input{
-    font-size: 2rem;
-}
-.modal-body option{
-    font-size: 2rem;
-}
-.modal-body select{
-    font-size: 2rem;
-}
-.details1{
-    font-size: 2rem;
-}
-.modal-header img{
-    width: 30px;
-    height: 30px;
-}
-.modal-header{
-    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
-    font-weight: bolder;
-}
-thead tr:hover{
-    color: #fff;
-    background-image: linear-gradient(rgba(41, 17, 29, 0.7),rgb(58, 51, 9));
-}
-@media only screen and (min-width:1200px) {
+        margin-left: 580px;
 
+}
+#datatable td{
+    font-weight: bold;
+    font-size: 1.5rem;
+ }
+@media only screen and (min-width:1200px) {
+table img{
+    height: 60px;
+    width: 60px;
+}
     #header img{
         
         margin-left: 150px;
@@ -141,13 +122,13 @@ thead tr:hover{
         color: white;
     }
     .form-search{
-        margin-left: 750px;
+        margin-top: 20px;
+        margin-left: 650px;
         display: inline-block;
      }
      .form-search .form-control{
-        width: 200px;
+        width: 300px;
         font-size: 1.1rem;
-        transition: 1.8s ease-in-out;
     }
     #tablead{
         background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
@@ -181,16 +162,28 @@ thead tr:hover{
         height: 35px;
         font-size: 15px;
         font-weight: 500;
+        margin-top: 30px;
+
     }
     .logo{
         height: 80px;
         width:80px;
         position:absolute;
         margin:20px;
+        margin-left: 120px;
     }
-   
+    .form-floating input{
+        width:247px;
+        font-weight: 900;
+        font-size:15px;
+        height: 50px; 
+        margin-left: 740px;
+    
+    }
 }
+  
 @media only screen and (max-width:800px) {
+    
     #no-more-tables tbody,
     #no-more-tables tr,
     #no-more-tables td
@@ -205,7 +198,7 @@ thead tr:hover{
     }
     #no-more-tables td{
         position: relative;
-        padding-left: 40%;
+        padding-left: 30%;
        
     }
     #no-more-tables td:before{
@@ -220,7 +213,7 @@ thead tr:hover{
         font-weight: bold;
      }
      .form-search{
-        margin-left: 120px;
+        margin-left: 370px;
         display: inline-block;
      }
      .container h1{ 
@@ -232,67 +225,115 @@ thead tr:hover{
        
     }
     .form-search .form-control{
-        width: 200px;
+        width: 220px;
        
-        transition: 1.8s ease-in-out;
     }
     .home{
         width: 60px; 
         height: 30px;
         font-size: 15px;
         font-weight: 500;
+        margin-top: 30px;
+
     }
+  
     .logo{
         height: 80px;
         width:80px;
         position:absolute;
         margin:20px;
     }
-    .form-floating{
-        margin-left:100px; 
-        margin-bottom: 20px;
-    }
     .form-floating input{
-        width:250px;
+        width:187px;
         font-weight: 900;
-        font-size:16px;
-        min-height: 50px;
-        min-height: 50px;
+        font-size:12px;
+        height: 30px; 
+        margin-left: 440px;
+    
     }
-    #datatable {
-        font-weight: BOLDER;
-        font-size: 1.2rem;
+}
+@media (max-width: 570px){ 
+ 
+
+.form-search{
+    margin-left: 125px;
+    display: inline-block;
+ }
+
+.form-search .form-control{
+      width: 115px;
+}
+.logo{
+    height: 80px;
+    width:80px;
+    margin:30px;
+     margin-left: 10px;
+
+}
+
+.home{
+    margin-top: 30px;
+}
+.form-floating input{
+    width:187px;
+    font-weight: 900;
+    font-size:12px;
+    height: 30px; 
+        margin-left: 140px;
+
+}
+#datatable td{
+    font-weight: bold;
+    font-size: 1.2rem;
+ }
+ #no-more-tables td{
+    position: relative;
+    padding-left: 35%;
+   
+}
+
+}
+
+@media screen and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .form-search{
+        margin-left: 77px;
+        display: inline-block;
      }
     
-}
-@media only screen and (max-width: 570px){
-
-    .form-floating input{
-        width:240px;
-        font-weight: 900;
-        font-size:16px;
-        min-height: 50px;
-        min-height: 50px;
-    }
-    .form-floating{
-        height: 20px; 
-       
-    }
     .form-search .form-control{
-        width: 150px;
-       
-        transition: 1.8s ease-in-out;
+        margin-top: 30px;
+          width: 57%;
+    }      
+    .form-search button{
+        margin-top: 30px;
+
     }
-    .form-search{
-        margin-left: 80px;
-     }
-     #no-more-tables td{
+    #no-more-tables td{
         position: relative;
-        padding-left: 37%;
+        padding-left: 40%;
        
     }
-    #datatable {
-        font-weight: BOLDER;
+   
+    #tablead{
+        background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
+        min-height: 100vh;
+        width: 120%;
+    }
+    .home{
+        margin-top: 30px;
+    }
+  
+    .form-floating input{
+        width:180px;
+        font-weight: 900;
+        font-size:10px;
+        height: 30px; 
+            margin-left: 100px;
+    
+    }
+    #datatable td{
+        font-weight: bold;
         font-size: 1.2rem;
      }
     

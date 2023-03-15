@@ -68,10 +68,9 @@
    
       <thead class="bg-dark text-light" >
         <tr align="center">
-        <th >CASHIER NAME</th>
-          <th>COSTUMER</th>
+        <th > NAME</th>
+          <th>USER</th>
           <th>EVENT</th>
-          <th>YEAR</th>
          
           <th>RECEIPT</th>
           <th>AMOUNT </th>
@@ -83,11 +82,10 @@
       @csrf 
       <tbody>
         <tr>
-          <td  data-title="CASHIER NAME">{{$income['cashier']}}</td>
-          <td class="roles" data-title="COSTUMER">{{$income['costumer']}}</td>
+          <td  data-title=" NAME">{{$income['cashier']}}</td>
+          <td class="roles" data-title="USER">{{$income['costumer']}}</td>
          
           <td data-title="EVENT">{{$income['events']}}</td>
-          <td class="votes" data-title="YEAR">{{$income['date']}}</td>
           <td  class="stats" data-title="RECEIPT">{{$income['officialr']}}</td>
           <td  class="stats" data-title="AMOUNT">{{$income['amount']}}</td>
           <td  class="stats" data-title="POINTS">{{$income['points']}}</td>

@@ -23,19 +23,18 @@
     background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
   }
   .container{
-      margin: 20px;
+      margin: 10px;
       max-width:65%;
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-gap:20px;
-      margin-top:50px;
-      margin-left: 250px;
+      margin-top:20px;
+      margin-left: 150px;
       transition: 2s ease-in-out;
     
   }
 
   .box{
-      height: 78vh;
+      height: 88vh;
       border-radius: 6px;
       position: relative;
       background: #f5f3ed;
@@ -46,7 +45,7 @@
     border-color: #0d6efd;
   }
   .title{
-      margin: 20px 20px 20px 20px; 
+      margin: 10px 10px 10px 10px; 
       text-align: center;
       font-weight: 500;
       font-size:18px;
@@ -57,8 +56,8 @@
       width: 100%;
     }
   .container form .user-details{
-      max-height:330px;
-      overflow-y:scroll;
+      max-height:430px;
+      overflow-y:hidden;
     }
   form .button input{
     width: 30%;
@@ -86,41 +85,17 @@
     
   }
   .upload img{
-      border: 5px solid #eaeaea;
-      height: 320px;
-      width: 400px;  
-      color:crimson;
-      text-align:center;
+    border: 5px solid burlywood;
+      height: 180px;
+      width: 200;  
       font-weight:500;
-      margin-left:150px;
+      margin-left:80px;
   
   }
-  .upload .round{
-      position: absolute;
-      bottom: 0;
-      background: #0d6efd;
-      width: 30px;
-      height: 30px;
-      line-height: 23px;
-      text-align: center;
-      border-radius: 50%;
-      overflow: hidden;  
-      margin-left:160px;
-      margin-bottom: 10px;
-  }
-  .upload i{
-      font-size:1.7rem;
-  }
-  .upload .round .fileimg[type='file']{
-      position: absolute;
-      transform: scale(4);
-      opacity: 0;  
-  }
-   .fileimg[type='file']::-webkit-file-upload-button{
-      cursor: pointer;   
-  }
+
+ 
   .user-details input{
-      width:90%;
+      width:70%;
       margin-left: 30px;
       border:1px solid #0d6efd;
       font-weight: 500;
@@ -131,110 +106,203 @@
   h2{
       text-transform: uppercase;
       text-align: center;
-     padding-top:20px;
+     padding-top:10px;
       color: #FFF;
   }
   .alert {
-      position: absolute;
+    position: relative;
       font-weight: 700;
-     font-size:.6rem;
+     font-size:.7rem;
       color: crimson;
      border: 2px solid crimson;
      padding: 3px 6px;
-     margin-left:95px;
+     margin-left:5px;
+     width:80%;
       
   }
  
-  .user-details select{
-      width:90%;
-      margin-left: 30px;
-      font-weight: 300;
-  }
+
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin:0;
   }
-  option{
-      font-weight: 700;
-  }
-  @media only screen and  (max-width: 870px){
-      .upload img{
-      border: 5px solid #eaeaea;
-      height: 300px;
-      width: 350px;  
-      color:crimson;
-      text-align:center;
-      font-weight:500;
-      margin-left:90px;
-  }
-  .container{
-      margin: 20px;
-      max-width:95%;
-      display:grid;
-    
-      grid-gap:20px;
-      margin-top:50px;
-  }
-  .upload .round{
-     margin-left: 100px; 
-     transition: 2s ease-in-out;
-  }
  
-  .title{
-      margin: 20px 20px 20px 20px; 
-      text-align: center;
-      font-weight: 500;
-      font-size:18px;
+  @media only screen and (min-width:1200px) {
+    .upload img{
+height: 220px;
+width: 240px;  
+color:crimson;
+font-weight:500;
+margin-left:200px;
+}
+.title{
+margin: 10px 10px 10px 10px; 
+text-align: center;
+font-weight: 500;
+font-size:13px;
+}
+
+.container{
+      margin: 20px;
+      max-width:60%;
+      margin-top:20px;
+      margin-left: 300px;
+    
   }
-  @media only screen and (max-width: 570px){
+
+
+    .user-details input{
+    align:center;
+    font-size:16px;
+    width:50%;
+    } 
+h2{
+padding-top:22px;
+}
+.alert {
+      position: relative;
+      font-weight: 700;
+     font-size:.8rem;
+      color: crimson;
+     border: 2px solid crimson;
+     padding: 3px 6px;
+     margin-left:1px;
+     margin-top:8px;
+     width:70%
+      
+  } 
+form .button input{
+font-size:18px;
+margin-top:50px;
+border-radius:3px;
+} 
+form .button a{
+font-size:15px;
+margin-top:50px;
+} 
+.box{
+height: 98vh;
+
+}
+.user-details span{
+font-weight: bold;
+font-size:15px;
+margin-left:40px;
+}
+.container form .user-details{
+max-height:590px;
+}
+  }
+
+@media only screen and (max-device-width: 800px){
+ .upload img{
+height: 170px;
+width: 270px;  
+color:crimson;
+text-align:center;
+font-weight:500;
+margin-left:90px;
+}
+.title{
+margin: 10px 10px 10px 10px; 
+text-align: center;
+font-weight: 500;
+font-size:13px;
+}
+
+.container{
+      margin: 20px;
+      max-width:80%;
+      margin-top:50px;
+      margin-left: 100px;
+    
+  }
+
+
+.user-details input{
+margin-left: 10px;
+font-size:16px;
+} 
+h2{
+padding-top:22px;
+}
+.alert {
+      position: relative;
+      font-weight: 700;
+     font-size:.8rem;
+      color: crimson;
+     border: 2px solid crimson;
+     padding: 3px 6px;
+     margin-left:1px;
+     width:80%;
+      
+  } 
+form .button input{
+font-size:15px;
+margin-top:35px;
+} 
+form .button a{
+font-size:10px;
+margin-top:35px;
+} 
+.box{
+height: 100vh;
+
+}
+.user-details span{
+font-weight: bold;
+font-size:15px;
+
+}
+.container form .user-details{
+max-height:390px;
+}
+  }
+  @media only screen and (min-device-width: 270px) and (max-device-width: 570px) {
+
       .upload img{
-      border: 5px solid #eaeaea;
-      height: 250px;
-      width: 250px;  
+
+      height: 170px;
+      width: 170px;  
       color:crimson;
       text-align:center;
       font-weight:500;
       margin-left:1px;
   }
   .title{
-      margin: 20px 20px 20px 20px; 
+      margin: 10px 10px 10px 10px; 
       text-align: center;
       font-weight: 500;
       font-size:13px;
   }
-  .upload .round{
-     margin-left: 20px; 
-     transition: 2s ease-in-out;
-  }
+
   .container{
       margin: 2px;
       max-width:99%;
-  
       margin-top:5px;
   }
  
-  .user-details select{
-      margin-left: 5px;
-  }     
+ 
   .user-details input{
-      margin-left: 5px;
+      margin-left: 10px;
+      font-size:16px;
   } 
   h2{
      padding-top:22px;
   }
   .alert {
       font-weight: 600;
-     font-size:.8rem;
+     font-size:.6rem;
      margin-top: 1px;
      padding: 3px 6px;
      margin-left:1px;
      width: 90%;
+     position: relative;
       
   
   }  
   form .button input{
-    width: 30%;
     font-size:15px;
     margin-top:30px;
   } 
@@ -243,12 +311,142 @@
     margin-top:30px;
   } 
   .box{
-      height: 72vh;
+      height: 95vh;
     
   }
-  
-      }
+  .user-details span{
+      font-weight: bold;
+    font-size:15px;
+
   }
+  .container form .user-details{
+      max-height:390px;
+    }
+  
+}
+@media only screen and (max-width: 570px) {
+
+.upload img{
+
+height: 170px;
+width: 170px;  
+color:crimson;
+text-align:center;
+font-weight:500;
+margin-left:40px;
+}
+.title{
+margin: 10px 10px 10px 10px; 
+text-align: center;
+font-weight: 500;
+font-size:13px;
+}
+
+.container{
+margin: 2px;
+max-width:99%;
+margin-top:5px;
+}
+
+
+.user-details input{
+margin-left: 10px;
+font-size:16px;
+} 
+h2{
+padding-top:22px;
+}
+.alert {
+font-weight: 600;
+font-size:.6rem;
+margin-top: 1px;
+padding: 3px 6px;
+margin-left:1px;
+width: 90%;
+position: relative;
+
+
+}  
+form .button input{
+font-size:15px;
+margin-top:30px;
+} 
+form .button a{
+font-size:10px;
+margin-top:30px;
+} 
+.box{
+height: 95vh;
+
+}
+.user-details span{
+font-weight: bold;
+font-size:15px;
+
+}
+.container form .user-details{
+max-height:390px;
+}
+
+}
+@media screen and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .upload img{
+      height: 120px;
+      width: 120px;  
+      margin-left:30px;
+  }
+  .title{
+      margin: 10px 10px 10px 10px; 
+      text-align: center;
+      font-weight: 900;
+      font-size:8px;
+  }
+
+  .container{
+      margin: 2px;
+      max-width:98%;
+      margin-top:5px;
+  }
+ 
+  
+  .user-details input{
+      margin-left: 10px;
+      font-size:.8rem;
+  } 
+  h2{
+     padding-top:12px;
+  }
+  .alert {
+      font-weight: 600;
+     font-size:.6rem;
+     margin-top: 1px;
+     padding: 3px 6px;
+     margin-left:1px;
+     width: 90%;
+     position: relative;
+      
+  
+  }  
+  form .button input{
+    font-size:15px;
+    margin-top:10px;
+    border-radius:3px;
+  } 
+  form .button a{
+    font-size:8px;
+    margin-top:10px;
+
+  } 
+  .box{
+      height: 90vh;
+  }
+  .input-box span{
+    font-size:10px;
+
+  }
+ 
+}
 
 </style>
 
@@ -260,7 +458,11 @@
 
 
  <div class="container">
- @if(Session::has('success'))
+
+    <!-- start how to join asdddddddddddddddddddddddddddddd-->
+    
+    <div class="box">
+    @if(Session::has('success'))
              <div class="alert alert-success">{{Session::get('success')}}</div>
              @endif
              @if(Session::has('fail'))
@@ -268,10 +470,6 @@
              @endif   
       @csrf
          @method('PUT')
-    <!-- start how to join asdddddddddddddddddddddddddddddd-->
-    <br>
-    <div class="box">
-   
     <div class="title">CANDIDATE INFORMATION VOTE WISELY</div>
     <form enctype='multipart/form-data' action="{{url('castvote/'.$vote->id)}}" method="post" class="form-container">
    
@@ -291,7 +489,7 @@
              <input type="hidden" name="eventc" placeholder="EVENT" value="{{$vote->eventc}}">
      
         <div class="input-box">
-          <span class="details">CANDIDATE NO.</span>
+          <span class="details spand2">CANDIDATE NO.</span>
           <input type="text" name="candino" placeholder="CANDIDATE NO." value="{{$vote->candino}}" readonly>
       </div>
     

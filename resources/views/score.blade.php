@@ -27,7 +27,6 @@ input[type=number]::-webkit-outer-spin-button{
 
 
 </style>
-
 <body>
 <!--header-->
 
@@ -55,18 +54,14 @@ input[type=number]::-webkit-outer-spin-button{
 
 <!-- end header-->
 <!--hero--> 
+<section id="hero"><br><br><br>
+<h2>CANDIDATES SCORE</h2>
 
- <!--user profile start-->
+<div class="hero_container">
 
- <section id="container1">
- <body>
-  <br><br>
-  
-<H2>CANDIDATE SCORE</H2>
- <div class="container1">
-    <!-- femlaessssssss-->
+  <div class="box1">
    
-    <div class="box">
+
     @if(Session::has('success'))
         <div class="alert alert-sucess msg">{{Session::get('success')}}</div>
         @endif
@@ -110,97 +105,95 @@ input[type=number]::-webkit-outer-spin-button{
     
   </form>
     </div>
-<!-- end femlaessssssss asdddddddddddddddddddddddddddddd-->
-<!-- start maleeeesss asdddddddddddddddddddddddddddddd-->
-
-
-    <div class="table-reponsive" id="no-more-tables1">
-   
-<h3>YOUR SCORES</h3>
-  <table id="datatable"   class="table bg-white" >
-      <thead align="center" class="bg-dark text-light" >
-        <tr >
-        <th >CANDIDATE</th>
-        <th >CRITERIA</th>
-        <th >PERCENT</th>
-        <th >SCORE</th>
-        <th >task</th>
-
-
-         
-        </tr>
-      </thead>
-      @if(count($creteris) > 0)
-               @foreach($creteris as $creteris) 
-      <tbody align="center">
-        <tr>
-      
-        <td class="CANDIDATE" data-title="CANDIDATE:"> {{$creteris['cricandidates']}}</td>
-          <td class="CRITERIA" data-title="CRITERIA"> {{$creteris['creteria']}}</td>
-          <td class="PERCENT" data-title="PERCENT"> {{$creteris['numberoption']}}%</td>
-
-          <td class="SCORE" data-title="SCORE:"> {{$creteris['scores']}}</td>
-          <td align="center"  data-title="TASK" class="task"style="width:200px;" >
-          <a href="{{ url('deletecri/' .$creteris['id'])}}"type="button" class="btn btn-danger editbtn" >CANCEL</a>&nbsp&nbsp
-          </td>
-    
-     
-        </tr>
-        
-      </tbody>
-      @endforeach
-      @else
-      <tr>
-        <td align="center" colspan= "8">NO SUBMITTED SCORES</td>
-      </tr>
-      @endif
-      
-    </table>
-
-
-
-<!-- sumbit scoressssssssssssssssssssssssssss maleeeesss asdddddddddddddddddddddddddddddd-->
-
-    <form action="/submitscores" method="post">
-    @csrf
-    @if(Session::has('success1'))
-        <div class="alert alert-sucess msg1">{{Session::get('success1')}}</div>
-        @endif
-        @if(Session::has('fail1'))
-        <div class="alert alert-danger msg1">{{Session::get('fail1')}}</div>
-        @endif
-    <input type="hidden" name="judge"  class="scoring" value="{{$student->Name}}">      
   
-    <input type="hidden" name="id" value="{{$data['id']}}">
-      <div class="user-details">
-        
-        <div class="input-box">
-        
-    <input type="hidden" name="gender" value="{{$data['gender']}}">
-      
-        <input type="hidden" name="namecno" value="{{$data['candino']}}">
-
-            <input type="hidden" name="namecan" value="{{$data['namecan']}}">
-
-       
-        <br> 
-      <div class="button">   
-      <input type="submit" class="btn btn-primary editbtnsubmit" value="SUBMIT SCORES">
-
-        
-        </div>
-
-  </form>
-
-  </div>
-
+  
+  <div class="box">
+  <div class="table-reponsive" id="no-more-tables1">
    
-    </div>
+   <h3>YOUR SCORES</h3>
+     <table id="datatable"   class="table bg-white" >
+         <thead align="center" class="bg-dark text-light" >
+           <tr >
+           <th >CANDIDATE</th>
+           <th >CRITERIA</th>
+           <th >PERCENT</th>
+           <th >SCORE</th>
+           <th >TASK</th>
+   
+   
+            
+           </tr>
+         </thead>
+         @if(count($creteris) > 0)
+                  @foreach($creteris as $creteris) 
+         <tbody align="center">
+           <tr>
+         
+           <td class="CANDIDATE" data-title="CANDIDATE:"> {{$creteris['cricandidates']}}</td>
+             <td class="CRITERIA" data-title="CRITERIA"> {{$creteris['creteria']}}</td>
+             <td class="PERCENT" data-title="PERCENT"> {{$creteris['numberoption']}}%</td>
+   
+             <td class="SCORE" data-title="SCORE:"> {{$creteris['scores']}}</td>
+             <td align="center"  data-title="TASK" class="task" >
+             <a href="{{ url('deletecri/' .$creteris['id'])}}"type="button" class="btn btn-danger editbtn" >CANCEL</a>&nbsp&nbsp
+             </td>
+       
+        
+           </tr>
+           
+         </tbody>
+         @endforeach
+         @else
+         <tr>
+           <td align="center" colspan= "8">NO SUBMITTED SCORES</td>
+         </tr>
+         @endif
+         
+       </table>
+   
+   
+   
+   <!-- sumbit scoressssssssssssssssssssssssssss maleeeesss asdddddddddddddddddddddddddddddd-->
+   
+       <form action="/submitscores" method="post">
+       @csrf
+       @if(Session::has('success1'))
+           <div class="alert alert-sucess msg1">{{Session::get('success1')}}</div>
+           @endif
+           @if(Session::has('fail1'))
+           <div class="alert alert-danger msg1">{{Session::get('fail1')}}</div>
+           @endif
+       <input type="hidden" name="judge"  class="scoring" value="{{$student->Name}}">      
+     
+       <input type="hidden" name="id" value="{{$data['id']}}">
+         <div class="user-details">
+           
+           <div class="input-box">
+           
+       <input type="hidden" name="gender" value="{{$data['gender']}}">
+         
+           <input type="hidden" name="namecno" value="{{$data['candino']}}">
+   
+               <input type="hidden" name="namecan" value="{{$data['namecan']}}">
+   
+          
+           <br> 
+         <div class="button">   
+         <input type="submit" class="btn btn-primary editbtnsubmit" value="SUBMIT SCORES">
+   
+           
+           </div>
+   
+     </form>
+   
+     </div>
+   
+      
+       </div>
+ <!--user profile start-->
+
+
  
-    
-
-
- </section>
  <script src="{{asset('bootstrap/js/apps.js')}}"></script>
 
  <script>

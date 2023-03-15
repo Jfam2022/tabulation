@@ -789,13 +789,18 @@ $males = Tabulation::where('gender', '=', "MALE")
            $category= $announcement->anountags1;
            $tops =  $announcement->anountags3;
           
-           $voteswinners = Passvote::where('voteeventc', '=', $event)
-       ->orderBy('votevpointsc','desc')->paginate(1);
+             $voteswinners = Tabulation::where('eventc', '=', $event)
+             ->where('gender', '=', "MALE")
+            ->orderBy('vpointsc','desc')->paginate(1);
+
+            $voteswinnersfs = Tabulation::where('eventc', '=', $event)
+            ->where('gender', '=', "FEMALE")
+            ->orderBy('vpointsc','desc')->paginate(1);
            
-           $minorwinners = Passvote::where('voteoptiona', '=', $event)
-              ->orderBy('votevpointsc','desc')->paginate(15);
+              $minorwinners = Passvote::where('voteoptiona', '=', $event)
+              ->orderBy('votevscores','desc')->paginate(15);
               
-               return view('masterceremonyminors',compact('minorwinners','voteswinners'));
+               return view('masterceremonyminors',compact('minorwinners','voteswinners','voteswinnersfs'));
            }
 //** ito pang master ceremony------------------------------------------ */
 

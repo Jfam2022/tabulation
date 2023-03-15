@@ -10,52 +10,10 @@ html{
     scroll-behavior: smooth;
     
 }
-body{
-
-    margin: 0;
-    justify-content:center;
-    align-items:center;
-    background-image: linear-gradient(rgba(199, 62, 131, 0.7),rgb(204,177,0));
-}
-.alert {
-    position: absolute;
-    font-weight: 700;
-    color: crimson;
-   margin-bottom: 350px;
-   border: 2px solid crimson;
-   padding: 3px 6px;
-   margin-left:20px
-}
-h2{
-    text-transform: uppercase;
-    text-align: center;
-   padding-top:40px;
-    color: #FFF;
-  
-}
-h3{
-    text-transform: uppercase;
-    text-align: center;
-   padding-top:40px;
-    color: #FFF;
-  
-}
-
-  
-
-.container{
-    max-width:95%;
-   
-}
-
-  
-  h1{
-      display:absolute;
-  }
 a{
     text-decoration: none;
 }
-#header .container{
+.container{
     justify-content: center;
     min-height: 100vh;
     width: 100%;
@@ -63,19 +21,23 @@ a{
     align-items: center;
    
 }
-.brand h1{
-    font-size:  1.5rem;
-    text-transform: uppercase;
-    color: white;
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
 }
 
+
+
+
+
 /*header section*/
-#header img{
-    width: 40px;
-    height: 40px;
-    margin-left: 150px;
-    
-}
 #header{
     position: fixed;
     z-index: 1000;
@@ -92,6 +54,7 @@ a{
     
    
 }
+
 #header .nav-bar{
     display: flex;
     align-items: center;
@@ -118,17 +81,13 @@ a{
     z-index: 1;
     overflow-x: hidden;
     transition: .5 ease left;
-  
     
 }
 #header .nav-list ul.active{
     left: 0;
-
-
 }
 
 #header .nav-list ul a{
-    margin-top:  20px;
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: .2rem;
@@ -145,7 +104,7 @@ a{
     left: 50%;
     transform: translate(-50%,-50%) scale(0); 
     color: rgba(216, 218, 241, 0.678);
-    font-size: 7rem;
+    font-size: 5rem;
     letter-spacing: 50px;
     z-index: -1;
     transition: .3s ease letter-spacing;
@@ -212,29 +171,118 @@ a{
 #header .hamburger.active .bar::after{
     top: 0;
 }
-.container1{
-    margin: 20px;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap:20px;
-    height: 483px;
+
+/*end header section*/
+/*hero section*/
+#hero{
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 103%;
+    width: 100%;
+    background-image: linear-gradient(rgb(204,177,0),rgba(199, 62, 131, 0.7));
+    opacity: .7;
+    z-index: -1;
+    
+    
+}
+
+@keyframes spin{
+    from {transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
+}
+.spinning{
+    animation: spin 3s infinite;
+}
+
+/*end footer*/
+/*keyframes*/
+@keyframes humburger_puls {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    
+}
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: #FFF;
+        font-weight: 500;
+    }
 }
 
 .box{
-    margin-top: 1px;
-    height: 75vh;
+    margin-left: 15px;
+    height: 35vh;
     border-radius: 6px;
     position: relative;
     background: #f5f3ed;
-    color:black;
-   
-   
+    width: 85%;
+    margin-bottom: 20px;
+}
+.box1{
+    height: 68vh;
+    border-radius: 6px;
+    position: relative;
+    background: #f5f3ed;
+    width: 85%;
+    margin-bottom: 40px;
+    margin-left: 15px;
 }
 
-.box .user-details{
-    max-height:350px;
-    overflow-y:scroll;
-  }
+
+
+
+
+#header img{
+    width: 40px;
+    height: 40px;
+    margin-left: 120px;
+}
+
+
+ .brand h1 {
+    font-size:  .9rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+ #hero h2{
+    text-align:center;
+     color:white; 
+     margin-top:30px; 
+     margin-bottom:10px;
+}
+
+
+
   
 
   .imgprof{
@@ -242,16 +290,18 @@ a{
     width: 180px;
     height: 180px;
     margin-left: 130px;
+    border: 2px solid burlywood;
+
 
 }
 
 
 .editbtn1{
     font-size: 1.6rem;
-    width: 200px;
+    width: 150px;
     margin-bottom:5px;
-    margin-left: 50px;
-    margin-top: 10px;
+    margin-left: 190px;
+    margin-top: 20px;
     
 }
 .label{
@@ -264,27 +314,9 @@ a{
     font-size: 1.6rem;
   
 }
-.container1 .title{
-    font-size: 25px;
-    font-weight:500;
-    position:relative;
-  
-  }
-  .container1 .title::before{
-    content:'';
-    position:absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background:#0d6efd;
-  }
-  
-  .containe1 form .user-details{
-      max-height:350px;
-      overflow-y:scroll;
-      width: 100%;
-    }
+
+
+
   form .user-details .input-box{
     margin-bottom: 5px;
     width: 80%;
@@ -303,22 +335,13 @@ a{
     transition: all 0.3s ease;
   }
  
-  .user-details .input-box input:focus,
-  .user-details .input-box input:valid{
-    border-color: #0d6efd;
-  
-  }
+ 
   .user-details select{
     margin-left: 20px;
     font-size:16px;
     font-weight: 600;
   }
-  .editbtn2{
-    font-size: 1.6rem;
-    width: 200px;
-    margin-bottom:5px;
-    margin-left: 50px;
-  }
+
   #datatable td{
     font-weight: bold;
     font-size: 1.3rem;
@@ -328,6 +351,8 @@ a{
  }
  #datatable{
    margin-top: 5px;
+   width: 90%;
+   margin-left: 15px;
     
  }
  .msg {
@@ -351,7 +376,7 @@ a{
    border: 2px solid crimson;
    padding: 3px 6px;
    margin-left:10px;
-   margin-top: 100px;
+   margin-top: 65px;
 }
 .editbtnsubmit{
     font-size: 1.6rem;
@@ -360,91 +385,113 @@ a{
     margin-left: 130px;
     
 }
-@keyframes humburger_puls {
-    0%{
-        opacity: 1;
-        transform: scale(1);
-    }
-    100%{
-        opacity: 0;
-        transform: scale(1.5);
-    }
-    
+label{
+    margin-left: 1px;
+    margin-bottom: 10px;
+    font-size: 2rem;
 }
-@keyframes spin{
-    from {transform: rotateY(0deg);}
-    to{transform: rotateY(360deg);}
+h3{
+    text-align:center;
+    margin-bottom: 20px;
 }
-.spinning{
-    animation: spin 3s infinite;
-}
-
 /*end keyframes*/
 /*media for tablets*/
 @media only screen and (max-width: 800px){
-
-    .imgprof{
-        margin-top: 10px;
-        width: 150px;
-        height: 150px;
-        margin-left: 80px;
-    transition: all 0.3s ease;
-
-    
-    }
-    .user-details span{
-        font-weight: bold;
-        margin-left: 50px;
-        font-size: 1.6rem;
-    transition: all 0.3s ease;
-
-    }
-    label{
-        margin-left: 1px;
-        margin-bottom: 20px;
-    transition: all 0.3s ease;
-    font-size: 1.3rem;
-
-    }
-    #datatable td{
-        font-weight: 900;
-        font-size: .9rem;
-     }
-     #datatable th{
-        font-size: 1.1rem;
-     }
-     .msg {
-        position: absolute;
-        font-weight: 700;
-       font-size:1rem;
-        color: crimson;
-       float: TOP;
-       border: 2px solid crimson;
-       padding: 3px 6px;
-       margin-left:10px;
-       margin-top:122px;
-    }
-    h3{
+   
+    .brand h1 {
+        font-size:  1rem;
         text-transform: uppercase;
-        text-align: center;
-       padding-top:.5px;
-        color: #FFF;
-      
+        color: white;
     }
-    .editbtnsubmit{
-        font-size: 1.6rem;
-        width: 170px;
-        margin-bottom:25px;
+
+ 
+    #header img{
+        width: 40px;
+        height: 40px;
+        margin-left: 100px;
+    }
+    .box{
+        height: 35vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        transition: 2s ease-in-out;
+
+    }
+    .box1{
+        height: 78vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        transition: 2s ease-in-out;
+
+    }
+   
+    #hero::after{
+        height: 103%;
         
     }
+
+      .title{
+        text-align: center;
+         font-weight: 500;
+         font-size:18px;
+     }
+     
+
+    .box1{
+        height: 73vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        transition: 2s ease-in-out;
+
+    }
+
+     #header img{
+      
+        margin-left: 90px;
+    }
+    .imgprof{
+        height: 170px;
+        width: 170px;
+        border: 2px solid burlywood;
+
+    }
+    #datatable{
+        width: 90%;
+        align-items: center;
+        margin-left: 2px;
+    }
   
+   /*end contact section*/
+   #hero h2{
+    text-align:center;
+     color:white; 
+     margin-top:30px; 
+     margin-bottom:10px;
+}
 
 }
-@media only screen and (min-width:1200px) {
+
+@media only screen and (min-width:1200px)  {
+    label{
+        margin-left: 1px;
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+    h3{
+        text-align:center;
+        margin-bottom: 20px;
+    }
 
     #header .hamburger{
         display: none;
     }
+  
     #header .nav-list ul{
         position: initial;
         display: block;
@@ -456,100 +503,273 @@ a{
         display: inline-block;
     }
     #header .nav-list ul li a{
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     
     }
     #header .nav-list ul a:after{
         display: none;
     }
-  
-    
+   
     .brand h1{
-        font-size:  2rem;
+        font-size:  1.5rem;
         text-transform: uppercase;
         color: white;
     }
-    #header img{
-        margin-left: 210px;
-    }
-   /*contact section*/
-   .editbtn1{
-    font-size: 1.6rem;
-    width: 200px;
-    margin-bottom:5px;
-    margin-left: 50px;
-    
-}
 
-
-label{
-    font-weight:700;
-    margin-left: 180px;
-    font-size: 1.5rem;
-   
-}
-
-.imgprof{
-    width: 200px;
-    height: 160px;
-    margin-left: 210px;
-
-}
-.msg {
-  
-   margin-top:125px;
-}
-.editbtnsubmit{
-  
-    margin-left: 230px;
-    
-}
-
-   
-}
-@media only screen and (max-width: 570px){
-
-    .imgprof{
-        margin-top: 10px;
-        width: 180px;
-        height: 180px;
-        margin-left: 100px;
-    }
-    .box .user-details{
-        max-height:370px;
-        overflow-y:hidden;
-      }
-      label{
-        margin-left: 1px;
-        margin-bottom: 10px;
-    font-size: 2rem;
+     .imgprof{
+        margin-top: 20px;
+        height: 200px;
+        width: 250px;
+        margin-left: 150px;
+        border: 2px solid burlywood;
     }
     .box{
-        height: 65vh;
+        height: 35vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        transition: 2s ease-in-out;
+
     }
-    .container1{
+    .box1{
+        height: 73vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        transition: 2s ease-in-out;
+
+    }
+    #hero .hero_container{
+        justify-content: center;
+       height: 90vh;
+        padding-top: 10px;
+        margin: 20px;
+      margin-left: 60px;
         display:grid;
-        grid-gap:100px;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .brand h1{
-        font-size:  .9rem;
+    #hero::after{
+        height: 103%;
+        
     }
-    #header img{
-        margin-left: 90px;
+
+    #hero h2{
+        text-align:center;
+         color:white; 
+         margin-top:40px; 
+         margin-bottom:10px;
     }
     .editbtn1{
-        margin-left:50px;
-    }
-    .user-details span{
-        font-weight: bold;
-        margin-left: 20px;
         font-size: 1.6rem;
-      
+        width: 150px;
+        margin-bottom:5px;
+        margin-left: 200px;
+        margin-top: 30px;
+        
     }
+ 
+}
+@media only screen and (min-device-width: 270px) and (max-device-width: 570px) {
+
+    .box{
+        margin-left: 5px;
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    .box1{
+        height: 78vh;
+        width: 95%;
+        margin-left: 5px;
+    }
+    #header img{
+        width: 40px;
+        height: 40px;
+        margin-left: 90px;
+    }
+     .brand h1 {
+        font-size:  .9rem;
+    }
+    
+     #hero h2{
+         margin-top:20px; 
+         margin-bottom:10px;
+    }
+
+      .imgprof{
+        margin-top: 5px;
+        width: 180px;
+        height: 180px;
+        margin-left: 80px;
+    
+    }
+    
+    
+    .editbtn1{
+        font-size: 1.6rem;
+        width: 150px;
+        margin-bottom:5px;
+        margin-left: 90px;
+        margin-top: 20px;
+        
+    }
+
+      
+      .user-details .input-box input{
+        height: 35px;
+        width:100%;
+        outline:none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size:16px;
+        margin-left: 20px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+      }
+
+    
+      #datatable td{
+        font-weight: bold;
+        font-size: 1.1rem;
+     }
+     #datatable th{
+        font-size: 1.1rem;
+     }
+     #datatable{
+       margin-top: 5px;
+       width: 80%;
+       margin-left: 2px;
+        
+     }
+     .msg {
+        position: absolute;
+        font-weight: 700;
+       font-size:1rem;
+       height: 30px;
+        color: crimson;
+       float: TOP;
+       border: 2px solid crimson;
+       padding: 3px 6px;
+       margin-left:10px;
+    }
+    .msg1 {
+        position: absolute;
+        font-weight: 700;
+       font-size:1rem;
+       height: 30px;
+        color: crimson;
+       float: TOP;
+       border: 2px solid crimson;
+       padding: 3px 6px;
+       margin-left:10px;
+       margin-top: 65px;
+    }
+  
 
 
 }
-    
- 
- 
+@media screen and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .box{
+        height: 45vh;
 
+        margin-left: 5px;
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    .box1{
+        height: 75vh;
+        width: 95%;
+        margin-left: 5px;
+    }
+    #header img{
+        width: 40px;
+        height: 40px;
+        margin-left: 80px;
+    }
+     .brand h1 {
+        font-size:  .8rem;
+    }
+    
+     #hero h2{
+         margin-top:20px; 
+         margin-bottom:10px;
+    }
+
+      .imgprof{
+        margin-top: 5px;
+        width: 120px;
+        height: 120px;
+        margin-left: 90px;
+    
+    }
+    
+    
+    .editbtn1{
+        font-size: 1.6rem;
+        width: 130px;
+        margin-bottom:5px;
+        margin-left: 75px;
+        margin-top: 20px;
+        
+    }
+
+      
+      .user-details .input-box input{
+        height: 35px;
+        width:100%;
+        outline:none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size:16px;
+        margin-left: 20px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+      }
+
+    
+      #datatable td{
+        font-weight: bold;
+        font-size: 1rem;
+     }
+     #datatable th{
+        font-size: 1rem;
+     }
+     #datatable{
+       margin-top: 5px;
+       width: 80%;
+       margin-left: 2px;
+        
+     }
+     .msg {
+        position: absolute;
+        font-weight: 700;
+       font-size:1rem;
+       height: 30px;
+        color: crimson;
+       float: TOP;
+       border: 2px solid crimson;
+       padding: 3px 6px;
+       margin-left:10px;
+    }
+    .msg1 {
+        position: absolute;
+        font-weight: 700;
+       font-size:1rem;
+       height: 30px;
+        color: crimson;
+       float: TOP;
+       border: 2px solid crimson;
+       padding: 3px 6px;
+       margin-left:10px;
+       margin-top: 65px;
+    }
+
+  
+}
+
+/*end media for tablets*/

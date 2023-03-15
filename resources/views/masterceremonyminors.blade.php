@@ -59,21 +59,44 @@
       <th >NAME:</th>
         <th  >CANDIDATE:</th>
         <th  >EVENT:</th>
+        <th  >GENDER:</th>
        
         <th  >SCORE:</th>
       </tr>
       </thead>
+    @if(count($voteswinnersfs) > 0)
+    @foreach($voteswinnersfs as $voteswinnersf) 
+    <tbody>
+      <tr>
+      <td  data-title="NAME:">{{$voteswinnersf['namecan']}}</td>
+         
+         <td class="CANDIDATE" data-title="CANDIDATE:"> {{$voteswinnersf['candino']}}</td>
+        
+         <td class="EVENT" data-title="EVENT:">{{$voteswinnersf['eventc']}}</td>
+         <td class="EVENT" data-title="EVENT:">{{$voteswinnersf['gender']}}</td>
+
+         <td style="color:crimson;  font-weight: 900; font-size:2rem; text-align:center;"  class="SCORE" data-title="SCORE:">{{$voteswinnersf['vpointsc']}}</td>
+   
+      </tr>
+    </tbody>
+    @endforeach
+    @else
+    <tr>
+      <td colspan= "6">NO WINNERS YET</td>
+    </tr>
+    @endif
     @if(count($voteswinners) > 0)
     @foreach($voteswinners as $voteswinner) 
     <tbody>
       <tr>
-      <td  data-title="NAME:">{{$voteswinner['votenamecan']}}</td>
+      <td  data-title="NAME:">{{$voteswinner['namecan']}}</td>
          
-         <td class="CANDIDATE" data-title="CANDIDATE:"> {{$voteswinner['votecandino']}}</td>
+         <td class="CANDIDATE" data-title="CANDIDATE:"> {{$voteswinner['candino']}}</td>
         
-         <td class="EVENT" data-title="EVENT:">{{$voteswinner['voteeventc']}}</td>
+         <td class="EVENT" data-title="EVENT:">{{$voteswinner['eventc']}}</td>
+         <td class="EVENT" data-title="EVENT:">{{$voteswinnersf['gender']}}</td>
 
-         <td style="color:crimson;  font-weight: 900; font-size:2rem; text-align:center;"  class="SCORE" data-title="SCORE:">{{$voteswinner['votevpointsc']}}</td>
+         <td style="color:crimson;  font-weight: 900; font-size:2rem; text-align:center;"  class="SCORE" data-title="SCORE:">{{$voteswinner['vpointsc']}}</td>
    
       </tr>
     </tbody>
@@ -84,6 +107,7 @@
     </tr>
     @endif
   </table>
+  
        </div>
        </div>
    

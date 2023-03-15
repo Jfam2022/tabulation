@@ -264,7 +264,7 @@ thead{
 
 }
 .box{
-    height: 70vh;
+    height: 80vh;
     border-radius: 6px;
     position: relative;
     background: #f5f3ed;
@@ -574,7 +574,10 @@ text-align: center;
     margin-left: 100px;
 }
 
- 
+.box{
+    height: 80vh;
+
+}
 }
    
 @media only screen and (max-width: 570px){

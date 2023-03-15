@@ -55,7 +55,7 @@
         <div class="alert alert-danger">{{Session::get('fail')}}</div>
         @endif
       
-        <h2 class="title">Log In</h2>
+        <h2 class="title1">Log In</h2>
           <div class="input-field">
             <i class="bi bi-envelope-fill"></i>
             <input type="email" name="email" placeholder="Email" required>
@@ -69,7 +69,7 @@
 
           </div>
           <input type="submit" class="btn solid" value="Log In">
-          <a href="{{ url('home/')}}" class="buts">BACK TO HOME</a>
+          <a href="{{ url('/')}}" class="buts">BACK TO HOME</a>
           <a href="#exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal" class="forgot">FORGOT PASSWORD?</a>
       </form>
 

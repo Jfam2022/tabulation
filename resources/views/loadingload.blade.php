@@ -33,7 +33,7 @@ body{
   border-radius:5px;
 }
 .container .title{
-  font-size: 12px;
+  font-size: 25px;
   font-weight:500;
   position:relative;
 
@@ -43,7 +43,7 @@ body{
   position:absolute;
   left: 0;
   bottom: 0;
-  height: .1rem;
+  height: 3px;
   width: 30px;
   background:#0d6efd;
 }
@@ -51,7 +51,7 @@ body{
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
-
+  margin:20px 0 12px 0;
 }
 form .user-details .input-box{
   margin-bottom: 15px;
@@ -104,40 +104,26 @@ form .button input:hover{
     color:crimson;
     font-weight: 500;
   }
-  .loadingstation{
-    font-weight: bolder;
-  }
-  .Cashier{
-    font-weight: bolder;
-  }
-  .Cashiername{
-    font-weight: bolder;
-    color:crimson;
-  }
-  .announcement
-  {
-    font-weight: bolder;
-    
-  }
   .alert {
     position: absolute;
     font-weight: 700;
-   font-size:.9rem;
+   font-size:.6rem;
     color: crimson;
-   
+   margin-bottom: 320px;
    border: 2px solid crimson;
    padding: 3px 6px;
-   margin-left:120px;
-
- 
+   margin-left:5px;
+   margin-top: 30px;
     
 }
+ 
+    
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button{
-  -webkit-appearance:none;
+  -webkit-appearance: none;
   margin:0;
 }
-  
 @media only screen and (max-width:800px) {
   .container{
   max-width:100%;
@@ -148,8 +134,7 @@ input[type=number]::-webkit-outer-spin-button{
   }
 
   .container form .user-details{
-    margin-top:30px;
-    max-height:260px;
+    max-height:200px;
     overflow-y:scroll;
   }
   
@@ -217,7 +202,6 @@ input[type=number]::-webkit-outer-spin-button{
         <input type="submit" value="SAVE">
       </div>
    
-      <a href="/loadingprofile" type="button" class="btn btn-primary">BACK TO HOME</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <a href="/loadingdata" type="button" class="btn btn-primary">SHOW DATA</a>
 
   </form>

@@ -273,23 +273,12 @@ p{
 
 
  .user-details{
-    max-height:278px;
+    max-height:478px;
     overflow-y:scroll;
    
   }
   
-  .navigate{
-    font-weight:900;
-    font-size: 1.5rem;
-    margin-left: 20px;
-}
-.navigate1{
-    font-weight: 500;
-    font-size:14px;
-    margin-left: 20px;
 
-
-}
 
 
 
@@ -391,79 +380,73 @@ form .button input{
 
 /*end keyframes*/
 /*media for tablets*/
-@media only screen and (max-width: 800px){
-    .brand h1 {
+@media only screen and (max-device-width: 800px){
+    .box{
+        margin-left: 10px;
+        height: 95vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 95%;
+        margin-bottom: 20px;
+        transition: 2s ease-in-out;
+
+    }
+    .box1{      
+        height: 85vh;
+        border-radius: 6px;
+        position: relative;
+        background: #f5f3ed;
+        width: 65%;
+        margin-bottom: 40px;
+        margin-left: 140px;
+        transition: 2s ease-in-out;
+
+    }
+    .box1 .user-details{
+        overflow-y:hidden;
+    max-height:478px;
+
+      }
+      .title{
+        margin-left: 40px;
+         font-weight: 500;
+         font-size:18px;
+     }
+   
+     .brand h1 {
         font-size:  1rem;
         text-transform: uppercase;
         color: white;
     }
-
- 
-    #header img{
-        width: 40px;
-        height: 40px;
-        margin-left: 100px;
-    }
-    .box{
-        height: 78vh;
-        border-radius: 6px;
-        position: relative;
-        background: #f5f3ed;
-        width: 95%;
-        transition: 2s ease-in-out;
-
-    }
-    .box1{
-        height: 78vh;
-        border-radius: 6px;
-        position: relative;
-        background: #f5f3ed;
-        width: 95%;
-        transition: 2s ease-in-out;
-
-    }
-   
-    #hero::after{
-        height: 103%;
-        
-    }
-    .user-details{
-        max-height:458px;
-        overflow-y:hidden;
-
-       
-      }
-      .title{
-        text-align: center;
-         font-weight: 500;
-         font-size:18px;
-     }
-
     .upload{
         width: 100px;
         position: relative;
        
     }
     .upload img{
-        border-radius: 50%;
+        border-radius: 20%;
         border: 5px solid #eaeaea;
-        height: 150px;
-        width: 150px;
-        margin-left:240px;
+        height: 170px;
+        width: 170px;
+        margin-left:170px;
            right: initial;
            top: initial;
            transition: 2s ease-in-out;
     }
+   
     form .button input{
         margin-left:150px;
              right: initial;
              top: initial;
              transition: 2s ease-in-out;
-             width:50%;
+             width:40%;
              margin-bottom: 10px;
-             margin-top: 10px;
+             margin-top: 20px;
+             font-size: 1.1rem;
       }
-      .upload .round .fileimg[type='file']{
+  
+    .upload .round .fileimg[type='file']{
         position: absolute;
         transform: scale(4);
         opacity: 0;
@@ -476,26 +459,24 @@ form .button input{
         position: absolute;
         bottom: 0;
         background: #0d6efd;
-        width: 35px;
-        height: 35px;
-        line-height:33px;
+        width: 30px;
+        height: 30px;
+        line-height:28px;
         text-align: center;
-        border-radius: 50%;
+        border-radius: 20%;
         overflow: hidden;
-        margin-left:240px;
-
+        margin-left:170px;
            right: initial;
            top: initial;
            transition: 2s ease-in-out;
     }
   
     .user-details input{
-        width:70%;
+        width:80%;
         margin-left: 30px;
         border:1px solid #0d6efd;
         font-weight: 700;
-        font-size: 2rem;
-        margin-top: 10px;
+        font-size: 1.5rem;
 
     } 
     .user-details span{
@@ -505,20 +486,29 @@ form .button input{
 
     }
     .form-container .user-details .input-box{
-        margin-bottom: 15px;
+        margin-bottom: 5px;
       }
       label{
         font-weight: bolder;
-        font-size:2rem;
+        font-size: 1.5rem;
         color: crimson;
     }
+       #header img{
+      
+        margin-left: 90px;
+    }
     .form-container1 img{
-        margin-left: 120px;
-        margin-top: 40px;
-        height: 350px;
-        width: 350px;
+        margin-left: 155px;
+        margin-top: 30px;
+        height: 390px;
+        width: 360px;
     }
   
+    .box .user-details{
+        overflow-y:hidden;
+    max-height:678px;
+
+      }
    /*end contact section*/
 
 
@@ -527,7 +517,7 @@ form .button input{
     .form-container1 img{
         margin-left: 80px;
         margin-top: 20px;
-        height: 320px;
+        height: 420px;
         width: 320px;
     }
     #header .hamburger{
@@ -690,11 +680,11 @@ form .button input{
         color: crimson;
     }
 }
-@media only screen and (max-width: 570px){
+@media only screen and (min-device-width: 270px) and (max-device-width: 570px) {
 
     .box{
         margin-left: 10px;
-        height: 68vh;
+        height: 85vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -704,7 +694,7 @@ form .button input{
 
     }
     .box1{      
-        height: 68vh;
+        height: 78vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -715,9 +705,8 @@ form .button input{
 
     }
    
-     .user-details{
-        max-height:378px;
-        overflow-y:scroll;
+    .box1 .user-details{
+        overflow-y:hidden;
        
       }
       .title{
@@ -727,7 +716,7 @@ form .button input{
      }
    
      .brand h1 {
-        font-size:  .9rem;
+        font-size:  .8rem;
         text-transform: uppercase;
         color: white;
     }
@@ -748,13 +737,14 @@ form .button input{
     }
    
     form .button input{
-        margin-left:110px;
+        margin-left:86px;
              right: initial;
              top: initial;
              transition: 2s ease-in-out;
              width:40%;
              margin-bottom: 10px;
              margin-top: 20px;
+             font-size: 1.1rem;
       }
   
     .upload .round .fileimg[type='file']{
@@ -809,13 +799,105 @@ form .button input{
         margin-left: 90px;
     }
     .form-container1 img{
-        margin-left: 50px;
+        margin-left: 5px;
         margin-top: 20px;
-        height: 330px;
-        width: 320px;
+        height: 320px;
+        width: 300px;
     }
   
 
 }
+@media screen and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    
+    
+    .box{
+        margin-left: 10px;
+        height: 90vh;
+        width: 95%;
+    }
+    .box1{      
+        height: 90vh;
+        width: 95%;
+    }
+   
+    .box1 .user-details{
+        max-height:400px;
+        overflow-y:hidden;
+       
+      }
+      .title{
+        margin-left: 40px;
+         font-weight: 500;
+         font-size:18px;
+     }
+     .brand h1 {
+        font-size:  .8rem;
+    }
+    .upload{
+        width: 100px;
+    }
+    .upload img{
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        margin-left:100px;
+
+    }
+   
+    form .button input{
+        margin-left:80px;
+    
+             width:40%;
+             margin-bottom: 10px;
+             margin-top: 20px;
+             font-size: 1rem;
+      }
+  
+
+    .upload i{
+        font-size:2rem;
+    }
+    .upload .round{
+        width: 30px;
+        height: 30px;
+        line-height:28px;
+        margin-left:100px;
+    }
+  
+    .user-details input{
+        width:80%;
+        margin-left: 30px;
+
+        font-weight: 700;
+        font-size: 1.5rem;
+
+    } 
+    .user-details span{
+
+        font-size: 1.5rem;
+        margin-left: 30px;
+    }
+    .form-container .user-details .input-box{
+        margin-bottom: 5px;
+      }
+      label{
+
+        font-size: 1.5rem;
+
+    }
+       #header img{
+        margin-left: 80px;
+    }
+    .form-container1 img{
+        margin-left: 5px;
+        margin-top: 20px;
+        height: 300px;
+        width: 280px;
+    }
+  
+  
+}
+
 
 /*end media for tablets*/

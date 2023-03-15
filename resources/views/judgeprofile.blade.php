@@ -40,7 +40,7 @@
 <!-- end header-->
 <!--hero--> 
 <section id="hero"><br><br><br>
-<H2 style="text-align:center; color:white; margin-top:10px; margin-bottom:10px;">WELCOME JUDGE</H2>
+<H2 style="text-align:center; color:white; margin-top:20px; margin-bottom:10px;">WELCOME JUDGE</H2>
 
 <div class="hero_container">
 

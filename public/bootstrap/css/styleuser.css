@@ -254,7 +254,7 @@ p{
 
 .box{
     margin-left: 15px;
-    height: 68vh;
+    height: 88vh;
     border-radius: 6px;
     position: relative;
     background: #f5f3ed;
@@ -262,7 +262,7 @@ p{
     margin-bottom: 20px;
 }
 .box1{
-    height: 68vh;
+    height: 88vh;
     border-radius: 6px;
     position: relative;
     background: #f5f3ed;
@@ -273,7 +273,7 @@ p{
 
 
  .user-details{
-    max-height:278px;
+    max-height:478px;
     overflow-y:scroll;
    
   }
@@ -312,22 +312,23 @@ p{
 .upload img{
     border-radius: 50%;
     border: 5px solid #eaeaea;
-    height: 120px;
-    width: 120px;
-    margin-left:80px;
+    height: 220px;
+    width: 220px;
+    margin-left:255px;
        right: initial;
        top: initial;
        transition: 2s ease-in-out;
 }
 
 form .button input{
-    margin-left:130px;
+    margin-left:200px;
          right: initial;
          top: initial;
          transition: 2s ease-in-out;
          width:40%;
          margin-bottom: 10px;
-         margin-top: 10px;
+         margin-top: 30px;
+         font-size:15px;
   }
 
 .upload .round .fileimg[type='file']{
@@ -337,36 +338,36 @@ form .button input{
    
 }
 .upload i{
-    font-size:2rem;
+    font-size:3rem;
 }
 .upload .round{
     position: absolute;
     bottom: 0;
     background: #0d6efd;
-    width: 30px;
-    height: 30px;
-    line-height:28px;
+    width: 40px;
+    height: 40px;
+    line-height:36px;
     text-align: center;
     border-radius: 50%;
     overflow: hidden;
-    margin-left:85px;
+    margin-left:285px;
        right: initial;
        top: initial;
        transition: 2s ease-in-out;
 }
 
 .user-details input{
-    width:80%;
+    width:50%;
     margin-left: 30px;
     border:1px solid #0d6efd;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
 } 
 .user-details span{
     font-weight: bolder;
     font-size: 1.5rem;
-    margin-left: 30px;
+    margin-left: 120px;
 
 }
 .form-container .user-details .input-box{
@@ -382,10 +383,17 @@ form .button input{
     height: 40px;
     margin-left: 100px;
 }
+#hero h2{
+    text-align:center; 
+    color:white; 
+    margin-top:30px; 
+    margin-bottom:10px;
+}
 
 /*end keyframes*/
 /*media for tablets*/
-@media only screen and (max-width: 800px){
+@media only screen and (max-device-width: 800px){
+
     .brand h1 {
         font-size:  1rem;
         text-transform: uppercase;
@@ -399,7 +407,7 @@ form .button input{
         margin-left: 100px;
     }
     .box{
-        height: 78vh;
+        height: 110vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -408,7 +416,7 @@ form .button input{
 
     }
     .box1{
-        height: 78vh;
+        height: 98vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -446,11 +454,11 @@ form .button input{
        
     }
     .upload img{
-        border-radius: 50%;
+        border-radius: 30%;
         border: 5px solid #eaeaea;
         height: 150px;
         width: 150px;
-        margin-left:210px;
+        margin-left:280px;
            right: initial;
            top: initial;
            transition: 2s ease-in-out;
@@ -463,6 +471,8 @@ form .button input{
              width:50%;
              margin-bottom: 10px;
              margin-top: 10px;
+        font-size:15px;
+
       }
       .upload .round .fileimg[type='file']{
         position: absolute;
@@ -483,7 +493,7 @@ form .button input{
         text-align: center;
         border-radius: 50%;
         overflow: hidden;
-        margin-left:210px;
+        margin-left:280px;
 
            right: initial;
            top: initial;
@@ -515,11 +525,15 @@ form .button input{
     }
   
    /*end contact section*/
-
+   #hero h2{
+    margin-top:10px; 
+}
 
 }
 @media only screen and (min-width:1200px) {
- 
+    #hero h2{
+        margin-top:50px; 
+    }
     #header .hamburger{
         display: none;
     }
@@ -556,7 +570,8 @@ form .button input{
         margin-left: 150px;
     }
     .box{
-        height: 78vh;
+        margin-top: 20px;
+        height: 88vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -565,7 +580,9 @@ form .button input{
 
     }
     .box1{
-        height: 78vh;
+        margin-top: 20px;
+
+        height: 88vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -588,7 +605,7 @@ form .button input{
         
     }
     .user-details{
-        max-height:328px;
+        max-height:428px;
         overflow-y:scroll;
        
       }
@@ -630,6 +647,8 @@ form .button input{
              width:40%;
              margin-bottom: 10px;
              margin-top: 20px;
+        font-size:17px;
+
       }
       .upload .round .fileimg[type='file']{
         position: absolute;
@@ -679,8 +698,12 @@ form .button input{
         font-size:2rem;
         color: crimson;
     }
+     #hero h2{
+        margin-top:10px; 
+    }
 }
-@media only screen and (max-width: 570px){
+@media only screen and (min-device-width: 270px) and (max-device-width: 570px) {
+
     .navigate{
         font-weight:900;
         font-size: 1.5rem;
@@ -695,7 +718,7 @@ form .button input{
     }
     .box{
         margin-left: 10px;
-        height: 68vh;
+        height: 80vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -705,7 +728,7 @@ form .button input{
 
     }
     .box1{      
-        height: 68vh;
+        height: 80vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -756,6 +779,8 @@ form .button input{
              width:40%;
              margin-bottom: 10px;
              margin-top: 10px;
+        font-size:15px;
+
       }
   
     .upload .round .fileimg[type='file']{
@@ -809,6 +834,9 @@ form .button input{
       
         margin-left: 90px;
     }
+    #hero h2{
+        margin-top:10px; 
+    }
   
 
 }
@@ -816,14 +844,15 @@ form .button input{
 and (-webkit-min-device-pixel-ratio: 2) {
     .box{
         margin-left: 10px;
-        height: 95vh;
+        height: 100vh;
 
         width: 95%;
         margin-bottom: 20px;
 
     }
+    
     .box1{      
-        height: 95vh;
+        height: 100vh;
         width: 95%;
         margin-bottom: 40px;
         margin-left: 10px;
@@ -843,12 +872,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     } 
     form .button input{
+        font-size:10px;
+
         margin-left:90px;
       }
    
     .upload img{
         height: 100px;
         width: 100px;
+    }
+    #hero h2{
+        margin-top:10px; 
     }
 }
 /*end media for tablets*/

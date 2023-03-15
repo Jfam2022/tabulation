@@ -115,7 +115,7 @@ Route::get('/search4',[IncomeController::class,'search4'])->name('search4');
 
 
 
-Route::get('admineditincome/{cashier}',[IncomeController::class,'showincome'])->middleware('alreadyLoggedIn');
+Route::get('admineditincome/{Name}',[IncomeController::class,'showincome'])->middleware('alreadyLoggedIn');
 Route::post('/add-user',[StudentController::class,'addUser'])->name('add-user');
 
 Route::get('edit/{id}',[StudentController::class,'updatestudents']);

@@ -17,42 +17,41 @@ class IncomeController extends Controller
         $announcement = Announcement::find(1);
         $event= $announcement->event1;
         $totalincome=Income::where('events',$event)->sum('amount');
-        $incomes = Income::orderBy('cashier','asc')->paginate(7);
+        $incomes = Student::where('role', 'like', '%'."FOR LOAD".'%')
+        ->orwhere('role', 'like', '%'."ADMIN".'%')->paginate(7);
+
         return view('adminincome', compact('incomes','totalincome','announcement'));
-    
-  
     } 
+    
     public function search2(Request $request){
         if( $request->isMethod('get')){
         $search = $request->get('search2');
         
-        $incomes = Income::where('cashier', 'like', '%'.$search .'%')
-        ->orderBy('cashier','asc')->paginate(7);
+        $incomes = Student::where('Name', 'like', '%'.$search .'%')
+        ->where('role', 'like', '%'."FOR LOAD".'%')
+        ->orwhere('role', 'like', '%'."ADMIN".'%')
+        ->orderBy('Name','asc')->paginate(7);
         $announcement = Announcement::find(1);
         $event= $announcement->event1;
         $totalincome=Income::where('events',$event)->sum('amount');
   
         return view('adminincome', compact('incomes','totalincome','announcement'));
-    
       } 
        }
-       
        public function showincome(Request $req){
         
         $announcement = Announcement::find(1);
         $event= $announcement->event1;
         $category= $announcement->anountags1;
-
-        $search=Income::where($req->cashier)
+        $search=Income::where($req->Name)
         ->where('events',$event);
-
-       
-        $search = $req->cashier;
+        $search = $req->Name;
         $search1=Income::where('cashier',$search)
         ->where('events',$event)->sum('amount');
        
         
-        $incomes = Income::where('cashier', 'like', '%'.$search .'%')->paginate(9);
+        $incomes = Income::where('cashier', 'like', '%'.$search .'%')
+        ->orderBy('events','desc')->paginate(9);
         return view('admineditincome', compact('incomes','req','search1'));
       } 
       public function search4(Request $req)

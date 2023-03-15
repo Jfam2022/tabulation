@@ -9,13 +9,10 @@
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{asset('bootstrap/css/judge.css')}}" rel="stylesheet">
-    <!-- Bootstrap Bundle with Popper -->
+     <!-- Bootstrap Bundle with Popper -->
     <script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
- 
+    
     <title>ST ROSE COLLEGE EDUCATIONAL FOUNDATION INC. CANDIDATES INFORMATION</title>
- 
-
-
 <body>
 <!--header-->
 
@@ -27,7 +24,7 @@
             </div>
            <div class="nav-list">
             <div class="hamburger"><div class="bar"></div></div>
-             <ul>
+            <ul>
               
                 <li><a href="{{ url('judgeprofile/')}}" data-after="HOME">HOME</a></li>
              </ul>
@@ -41,18 +38,15 @@
 
 <!-- end header-->
 <!--hero--> 
+<section id="hero"><br><br><br>
+<h2  >CANDIDATES INFORMATION</h2>
 
- <!--user profile start-->
+<div class="hero_container">
 
- <section id="container1">
- <body>
- <br><br>
-<H2>candidates information</H2>
- <div class="container1">
-    <!-- femlaessssssss-->
+  <div class="box1">
    
-    <div class="box">
-    <div class="title">FEMALE CANDIDATE</div>
+
+  <div class="title">FEMALE CANDIDATE</div>
       <h3 style="text-align:center; color:crimson">COUNT: {{$countingFEMALE}}</h3>
     <form method="post" class="join">
                 @csrf
@@ -65,18 +59,23 @@
               <thead class="bg-dark text-light" >
                  <tr >
                  <th  >IMAGE</th>
+                 <th  >NAME</th>
+                 <th  >NO.</th>
+                 <th  >GENDER</th>
+                 <th   colspan="2"  >TASK</th>
+
                 </tr>
               </thead>
           
             <tbody>
                 <tr>
         <td align="center"  data-title="IMAGE"><img class="imgprof"src="{{asset('images/'.$female->image)}}" alt="candidate Picture"></td></td>
-          <td  data-title="NAME:">{{$female['namecan']}}</td>
-          <td class="CANDIDATE" data-title="CANDIDATE:"> {{$female['candino']}}</td>
-          <td class="CANDIDATE" data-title="GENDER:"> {{$female['gender']}}</td>
+          <td style="padding-top:30px" data-title="NAME:">{{$female['namecan']}}</td>
+          <td style="padding-top:30px"  class="CANDIDATE" data-title="CANDIDATE:"> {{$female['candino']}}</td>
+          <td style="padding-top:30px"  class="CANDIDATE" data-title="GENDER:"> {{$female['gender']}}</td>
 
     
-          <td align="center"  data-title="TASK" class="task1" style="" >
+          <td style="padding-top:30px"  align="center"  data-title="TASK" class="task1" style="" >
             <a href="{{ url('givescore/' .$female['id'])}}"type="button" class="btn btn-primary editbtn1" >SCORE</a>&nbsp&nbsp
 
         </td>
@@ -89,19 +88,23 @@
         <td   colspan= "32">NO CANDIDATES</td>
       </tr>
       @endif
-        </table>
+
+        </table><br><br>
+        <span class="tlinks">
+    {{$females->links()}}
+</span>
        </div> 
           <!-- start mr and ms asdddddddddddddddddddddddddddddd-->
     </div> 
-    <span class="tlinks">
-    {{$females->links()}}
-</span>
+  
 </form>
-    </div>
-<!-- end femlaessssssss asdddddddddddddddddddddddddddddd-->
-<!-- start maleeeesss asdddddddddddddddddddddddddddddd-->
-    <div class="box">
-    <div class="title">MALE CANDIDATE</div>
+
+  </div>
+
+  
+  
+  <div class="box">
+  <div class="title">MALE CANDIDATE</div>
     <h3 style="text-align:center; color:crimson">COUNT: {{$countingMALE}}</h3>
 
     <form method="post" class="join">
@@ -115,17 +118,21 @@
               <thead class="bg-dark text-light" >
                  <tr >
                  <th  >IMAGE</th>
+                 <th  >NAME</th>
+                 <th  >NO.</th>
+                 <th  >GENDER</th>
+                 <th   colspan="2"  >TASK</th>
                 </tr>
               </thead>
           
             <tbody>
                 <tr>
         <td align="center"  data-title="IMAGE"><img class="imgprof"src="{{asset('images/'.$male->image)}}" alt="candidate Picture"></td></td>
-          <td  data-title="NAME:">{{$male['namecan']}}</td>
-          <td class="CANDIDATE" data-title="CANDIDATE:"> {{$male['candino']}}</td>
-          <td class="CANDIDATE" data-title="GENDER:"> {{$male['gender']}}</td>
+          <td style="padding-top:30px"   data-title="NAME:">{{$male['namecan']}}</td>
+          <td style="padding-top:30px"  class="CANDIDATE" data-title="CANDIDATE:"> {{$male['candino']}}</td>
+          <td  style="padding-top:30px" class="CANDIDATE" data-title="GENDER:"> {{$male['gender']}}</td>
     
-          <td align="center"  data-title="TASK" class="task1" style="" >
+          <td style="padding-top:30px"  align="center"  data-title="TASK" class="task1"  >
             <a href="{{ url('givescore/' .$male['id'])}}"type="button" class="btn btn-primary editbtn1" >SCORE</a>&nbsp&nbsp
 
         </td>
@@ -138,21 +145,20 @@
         <td  colspan= "3">NO CANDIDATES</td>
       </tr>
       @endif
-        </table>
+      
+        </table><br><br>
+        <span class="tlinks">
+    {{$males->links()}}
+    </span>
        </div> 
           <!-- start mr and ms asdddddddddddddddddddddddddddddd-->
     </div> 
-    <span class="tlinks">
-    {{$males->links()}}
-</span>
+  
 </form>
-    </div>
-    </div>
- 
-    
- </div>
+ <!--user profile start-->
 
- </section>
+
+ 
  <script src="{{asset('bootstrap/js/apps.js')}}"></script>
 
  <script>

@@ -147,11 +147,7 @@ h1{
     cursor: pointer;
     
 }
-.user-details select{
-    width:90%;
-    margin-left: 30px;
-    font-weight: 500;
-}
+
 .user-details input{
     width:90%;
     margin-left: 30px;
@@ -235,6 +231,10 @@ a{
     animation: spin 3s infinite;
 }
 @media only screen and (max-width: 870px){
+  .box{
+    height: 85vh;
+  
+}
     form .button input{
   margin-left:150px;
   transform: translateX(-30%);
@@ -274,6 +274,7 @@ a{
     
 }
 }
+
 @media (max-width: 570px){
     form .button input{
   margin-left:120px;
@@ -319,7 +320,7 @@ h2{
     margin:50px;
 }
 .box{
-    height: 65vh;
+    height: 70vh;
     margin-top:20px;
   
 }
@@ -333,6 +334,72 @@ h2{
     max-height:270px;
   
   }
+}
+@media screen and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  form .button input{
+  margin-left:120px;
+       right: initial;
+       top: initial;
+       transition: 2s ease-in-out;
+}
+.upload .round{
+    margin-left:76px;
+}
+.upload img{
+    margin-left:86px;
+   
+}
+h2{
+  font-size:1.2rem;
+  margin-left:28px;
+}
+.alert {
+    position: absolute;
+    font-weight: 700;
+   font-size:.6rem;
+    color: crimson;
+   margin-bottom: 320px;
+   border: 2px solid crimson;
+   padding: 3px 6px;
+   margin-left:5px;
+   margin-top: 30px;
+    
+}
+.btn-primary{
+  margin-top:30px;
+}
+.logo{
+    height: 80px;
+    width:80px;
+    margin:50px;
+}
+.box{
+    height: 95vh;
+    margin-top:10px;
+  
+}
+.container{
+  max-width:100%;
+  margin-left:2px;
+
+  }
+.user-details .input-box input{
+  font-size:10px;
+  width:75%;
+  margin-left:2px;
+  margin-top:10px;
+}
+.user-details1{
+    max-height:270px;
+  
+  }
+  .user-details span{
+    font-weight: bold;
+  font-size:10px;
+
+}
+
 }
 
 
