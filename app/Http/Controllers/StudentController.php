@@ -38,7 +38,7 @@ class StudentController extends Controller
     public function registerUser(Request $request){
       $request->validate([
         'name'=>'required',
-        'password'=>'required|min:5|max:12',
+        'password'=>'required|min:5|max:22',
         'email'=>'required|email|unique:students',
         
        ]);
@@ -61,7 +61,7 @@ class StudentController extends Controller
   public function loginUser(Request $request){
     $request->validate([
         'email'=>'required|email',
-        'password'=>'required|min:5|max:12',
+        'password'=>'required|min:5|max:22',
        ]);
        
        $student = Student::where('email','=',$request->email)
@@ -116,12 +116,12 @@ class StudentController extends Controller
  
 $females = Tabulation::where('gender', '=', "FEMALE")
 ->where('eventc', '=', $event)
-->orderBy('vpointsc','desc')->paginate(3);
+->orderBy('vpointsc','desc')->paginate(10);
 
 
 $males = Tabulation::where('gender', '=', "MALE")
   ->where('eventc', '=', $event)
-  ->orderBy('vpointsc','desc')->paginate(3);
+  ->orderBy('vpointsc','desc')->paginate(10);
 
 
 

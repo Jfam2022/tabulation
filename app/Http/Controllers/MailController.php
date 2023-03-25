@@ -24,16 +24,22 @@ use App\Models\Passvote;
 class MailController extends Controller
 {
     public function sendEmail(Request $request){
-
+        $request->validate([
+            'email'=>'required',
+           ]);
         $data=Student::where('email','=',$request->email)->first();
-
-        $details =[
-            'title' =>'Mail from St. Rose College Educational Foundation Inc.',
-            'body' =>'YOUR PASSWORD IS '.$data->password1.
-            ' YOU CAN CHANGE YOUR PASSWORD TO YOUR SRC TABULATION ACCOUNT',
-        ];
-        Mail::to($data->email)->send(new Testmail($details));
-        return back()->with('success','PASSWORD SENT CHECK YOUR EMAIL');
-
+           if($data){
+            $details =[
+                'title' =>'Mail from St. Rose College Educational Foundation Inc.',
+                'body' =>'YOUR PASSWORD IS '.$data->password1.
+                ' YOU CAN CHANGE YOUR PASSWORD TO YOUR SRC TABULATION ACCOUNT',
+            ];
+            Mail::to($data->email)->send(new Testmail($details));
+            return back()->with('success','PASSWORD SENT CHECK YOUR EMAIL');
+    
+           }else{
+            return back()->with('fail','PLEASE SIGN UP FIRST');
+           }
+     
     }
 }

@@ -506,6 +506,10 @@ form .button input{
                          </select>
                          <span>REMARKS: <span class="details1">{{$announcement->anountags4}}</span></span>
                   </div>
+                  <div class="input-box">
+                   <span class="details">VOTE TO CLOSE</span>
+                   <input type="number" name="count" placeholder="Enter time to Close the voting" value="{{$announcement->anounnumber3}}" required>
+                  </div>
       	<div class="input-box">
             <!-- start male winner-->
             <span class="details">CHANGE PICTURE ABOUT</span><br>
@@ -532,6 +536,7 @@ form .button input{
           <input type="text" name="fb" placeholder="Enter Your FB link" value="{{$announcement->fb}}" required>
           </div>
       </div>
+
     
              <div class="button">
         <input  type="submit" value="UPDATE">  </div>

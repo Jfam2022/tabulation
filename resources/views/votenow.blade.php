@@ -55,7 +55,7 @@
                  <th  >IMAGE:</th>
                  <th style=" text-align:center;"  >NAME:</th>
                 <th  >NO.:</th>
-                <th  >DEPT:</th>
+                <th  >VOTES:</th>
                 <th  >EVENT:</th>
                 <th   colspan="1"  >VOTE</th>
                 </tr>
@@ -67,7 +67,7 @@
         <td align="center"  data-title="IMAGE"><img class="imgprof"src="{{asset('images/'.$female->image)}}" alt="candidate Picture"></td></td>
           <td style=" text-align:center; padding:20px;"   data-title="NAME:">{{$female['namecan']}}</td>
           <td class="CANDIDATE" data-title="CANDIDATE:"> {{$female['candino']}}</td>
-          <td data-title="DEPARTMENT:">{{$female['deptc']}}</td>
+          <td data-title="VOTES:">{{$female['vpointsc']}}</td>
           <td class="EVENT"   data-title="EVENT:">{{$female['eventc']}}</td>
           <td align="center"  data-title="TASK" style="width:50px; padding:15px;" >
           <a href="{{ url('addvote/' .$female['id'])}}"type="button" class="btn btn-primary " >VOTE</a>&nbsp&nbsp
@@ -108,7 +108,8 @@
                  <th align="center" >IMAGE:</th>
                  <th   >NAME:</th>
                 <th  >NO.:</th>
-                <th  >DEPT:</th>
+                <th  >VOTES:</th>
+
                 <th  >EVENT:</th>
                 <th   colspan="1"  >VOTE</th>
                 </tr>
@@ -121,7 +122,7 @@
         <td style=" text-align:center; padding:20px; width:100%;"data-title="NAME:">{{$male['namecan']}}</td>
          
          <td class="CANDIDATE" data-title="CANDIDATE:"> {{$male['candino']}}</td>
-         <td data-title="DEPARTMENT:">{{$male['deptc']}}</td>
+         <td data-title="VOTES:">{{$male['vpointsc']}}</td>
          <td style="width:100%;"  class="EVENT">{{$male['eventc']}}</td>
         
           <td align="center"  data-title="TASK" style="width:50px; padding:15px;" >

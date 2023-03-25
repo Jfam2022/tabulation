@@ -259,11 +259,13 @@ public function votenow(Request $request)
   }else{
   $females = Tabulation::where('gender', '=', "FEMALE")
   ->where('eventc', '=', $event)
-  ->where('currentc', '=', $category)->paginate(20);
+  ->where('currentc', '=', $category)
+  ->orderBy('vpointsc','desc')->paginate(20);
 
   $males = Tabulation::where('gender', '=', "MALE")
      ->where('eventc', '=', $event)
-     ->where('currentc', '=', $category )->paginate(20);
+     ->where('currentc', '=', $category )
+     ->orderBy('vpointsc','desc')->paginate(20);
      return view('votenow', compact('females','males'));
     }
   }

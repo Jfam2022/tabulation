@@ -79,7 +79,8 @@
          
               <option value="DCS">DCS</option>
               <option value="EDUCATION">EDUCATION</option>
-              <option value="CBA">CBA</option>
+              <option value="BSBA">BSBA</option>
+              <option value="BSA">BSA</option>
               <option value="CRIM">CRIM</option>
           </select>
 

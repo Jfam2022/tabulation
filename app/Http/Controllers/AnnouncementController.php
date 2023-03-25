@@ -269,6 +269,8 @@ class AnnouncementController extends Controller
           $announcement->fb=$request->fb;
           $announcement->anountags1="NO RECORDS";
           $announcement->anountags4=$request->VOTING;
+          $announcement->anounnumber3=$request->count;
+
           $announcement->anountags3=$request->event;
 
 
@@ -302,6 +304,7 @@ class AnnouncementController extends Controller
        $announcement->anountags4=$request->VOTING;
        $announcement->anountags3=$request->event;
        $announcement->anountags1="NO RECORDS";
+       $announcement->anounnumber3=$request->count;
 
           
         if($request->hasFile('avatarabout')){

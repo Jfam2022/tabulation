@@ -88,7 +88,7 @@ background: -webkit-linear-gradient(90deg, #EC9F05, #ec0d05);
   @endif
         <div class="digital_clock">
        
-        <h1 class="digital_clockh1">THE VOTE WILL CLOSE AT EXACLY 8 PM</h1>
+        <h1 class="digital_clockh1">THE VOTE WILL CLOSE AT EXACLY {{$announcement->anounnumber3}} PM</h1>
             <div class="time">
                 <span class="hour">00</span>
                 <span class="dot">:</span>
