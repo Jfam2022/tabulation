@@ -221,8 +221,10 @@ public function dashviewcandi(Request $request)
 
 
   }else{
-  $females = Tabulation::where('gender', '=', "FEMALE")->paginate(12);
-  $males = Tabulation::where('gender', '=', "MALE")->paginate(12);
+  $females = Tabulation::where('gender', '=', "FEMALE")
+  ->orderBy('optionb','ASC')->paginate(12);
+  $males = Tabulation::where('gender', '=', "MALE")
+  ->orderBy('optionb','ASC')->paginate(12);
 
     return view('dashviewcandi', compact('females','males'));
 
@@ -654,7 +656,8 @@ $males = Tabulation::where('gender', '=', "MALE")
    $limitentryfemale =  Passvote::where('votecurrentc', '=',$findfemale ->cricandidates)
    ->where('voteoptiona', '=',$event)
    ->where('voteoptionb', '=',$findfemale ->creteria)->count();
-
+  
+  
 
 
   if($limitentryfemale ==1 ){

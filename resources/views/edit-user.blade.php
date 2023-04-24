@@ -133,8 +133,8 @@ form .button input:hover{
        
         <div class="input-box">
 
-          <span class="details">Password</span>
-          <input type="text" name="password" placeholder="Change Password Here " value="{{$data['password1']}}" required>
+          
+          <input type="hidden" name="password" placeholder="Change Password Here " value="{{$data['password1']}}" required>
         </div>
         <div class="input-box">
           <span class="details">Email</span>

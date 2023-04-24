@@ -25,6 +25,8 @@ Route::get('/',[AnnouncementController::class,'home']);
 Route::get('/send-email',[MailController::class,'sendEmail'])->name('send-email');
 
 Route::get('/admin',[StudentController::class,'admin'])->middleware('alreadyLoggedIn');
+Route::get('/accounting',[StudentController::class,'accounting']);
+
 Route::get('/judgeprofile',[StudentController::class,'judgeprofile'])->middleware('alreadyLoggedIn');
 Route::get('/dashboard',[StudentController::class,'Dashboard'])->middleware('alreadyLoggedIn');
 Route::get('/advertisement',[StudentController::class,'advertisement'])->middleware('alreadyLoggedIn');

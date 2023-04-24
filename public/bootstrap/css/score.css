@@ -286,23 +286,21 @@ p{
   
 
   .imgprof{
-    margin-top: 2px;
-    width: 180px;
-    height: 180px;
-    margin-left: 130px;
+    margin-top: 70px;
+    height: 300px;
+    width: 250px;
+    margin-left: 20px;
     border: 2px solid burlywood;
-
-
+    position: absolute;
 }
 
 
 .editbtn1{
     font-size: 1.6rem;
-    width: 150px;
+    width: 170px;
     margin-bottom:5px;
-    margin-left: 190px;
-    margin-top: 20px;
-    
+    margin-left: 320px;
+    margin-top: 30px;
 }
 .label{
     color: crimson;
@@ -337,10 +335,12 @@ p{
  
  
   .user-details select{
-    margin-left: 20px;
     font-size:16px;
     font-weight: 600;
-  }
+
+    margin-left: 330px;
+    width: 50%;
+    }
 
   #datatable td{
     font-weight: bold;
@@ -393,6 +393,13 @@ label{
 h3{
     text-align:center;
     margin-bottom: 20px;
+}
+.user-details .input-box .scoring{
+    width: 50%;
+    margin-left: 330px;
+}
+.user-details .details{
+    margin-left: 330px;
 }
 /*end keyframes*/
 /*media for tablets*/
@@ -455,34 +462,56 @@ h3{
       
         margin-left: 90px;
     }
-    .imgprof{
-        height: 170px;
-        width: 170px;
-        border: 2px solid burlywood;
-
+    #hero h2{
+        text-align:center;
+         color:white; 
+         margin-top:30px; 
+         margin-bottom:10px;
     }
     #datatable{
         width: 90%;
         align-items: center;
         margin-left: 2px;
     }
+    .imgprof{
+        margin-top: 70px;
+        height: 300px;
+        width: 250px;
+        margin-left: 20px;
+        border: 2px solid burlywood;
+        position: absolute;
+
+    }
+  
   
    /*end contact section*/
-   #hero h2{
-    text-align:center;
-     color:white; 
-     margin-top:30px; 
-     margin-bottom:10px;
+
+.user-details .input-box label{
+    margin-top: 30px;
+}
+.user-details select{
+    margin-left: 330px;
+  width: 50%;
+  }
+.user-details .details{
+    margin-left: 330px;
+}
+.user-details .input-box .scoring{
+    width: 50%;
+    margin-left: 330px;
 }
 
+.editbtn1{
+    font-size: 1.6rem;
+    width: 150px;
+    margin-bottom:5px;
+    margin-left: 360px;
+    margin-top: 30px;
+}
 }
 
-@media only screen and (min-width:1200px)  {
-    label{
-        margin-left: 1px;
-        margin-bottom: 10px;
-        font-size: 2rem;
-    }
+@media only screen and (min-width:1200px )  {
+
     h3{
         text-align:center;
         margin-bottom: 20px;
@@ -517,11 +546,12 @@ h3{
     }
 
      .imgprof{
-        margin-top: 20px;
-        height: 200px;
-        width: 250px;
-        margin-left: 150px;
+        margin-top: 70px;
+        height: 400px;
+        width: 280px;
+        margin-left: 20px;
         border: 2px solid burlywood;
+        position: absolute;
     }
     .box{
         height: 35vh;
@@ -533,7 +563,7 @@ h3{
 
     }
     .box1{
-        height: 73vh;
+        height: 83vh;
         border-radius: 6px;
         position: relative;
         background: #f5f3ed;
@@ -553,7 +583,6 @@ h3{
     }
     #hero::after{
         height: 103%;
-        
     }
 
     #hero h2{
@@ -566,14 +595,43 @@ h3{
         font-size: 1.6rem;
         width: 150px;
         margin-bottom:5px;
-        margin-left: 200px;
+        margin-left: 360px;
         margin-top: 30px;
-        
     }
+    .user-details .input-box label{
+        margin-top: 30px;
+    }
+    .user-details select{
+        margin-left: 330px;
+
+      width: 50%;
+      }
+    .user-details .details{
+        margin-left: 330px;
+    }
+    .user-details .input-box .scoring{
+        width: 50%;
+        margin-left: 330px;
+    }
+  
  
 }
 @media only screen and (min-device-width: 270px) and (max-device-width: 570px) {
+    .user-details .input-box label{
+        margin-top: 30px;
+    }
+    .user-details select{
+        margin-left: 30px;
 
+      width: 80%;
+      }
+    .user-details .details{
+        margin-left: 30px;
+    }
+    .user-details .input-box .scoring{
+        width: 80%;
+        margin-left: 30px;
+    }
     .box{
         margin-left: 5px;
         width: 95%;
@@ -601,10 +659,11 @@ h3{
       .imgprof{
         margin-top: 5px;
         width: 180px;
-        height: 180px;
+        height: 200px;
         margin-left: 80px;
-    
+        position: relative;    
     }
+  
     
     
     .editbtn1{
@@ -674,14 +733,14 @@ h3{
 @media screen and (max-device-width: 320px)
 and (-webkit-min-device-pixel-ratio: 2) {
     .box{
-        height: 45vh;
+        height: 75vh;
 
         margin-left: 5px;
         width: 95%;
         margin-bottom: 20px;
     }
     .box1{
-        height: 75vh;
+        height: 105vh;
         width: 95%;
         margin-left: 5px;
     }
@@ -701,8 +760,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
       .imgprof{
         margin-top: 5px;
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 200px;
         margin-left: 90px;
     
     }

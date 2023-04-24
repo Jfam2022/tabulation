@@ -8,6 +8,7 @@
     <script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>ST ROSE COLLEGE EDUCATIONAL FOUNDATION INC. HOME PAGE</title>
 
 <body>
@@ -26,6 +27,7 @@
                 <li><a href="#hero" data-after="HOME">HOME</a></li>
                 <li><a href="#services" data-after="JOINUS">JOIN US</a></li>
                 <li><a href="#about" data-after="ABOUT">ABOUT</a></li>
+                
                 <li><a href="#contact" data-after="CONTACTS">CONTACTS</a></li>
                 <li><a href="{{url('login/')}}" data-after="LOGIN">LOG IN</a></li>
              </ul>
@@ -142,7 +144,7 @@ St. Rose College Educational Foundation Inc. also has courses offered such as Ba
         </div>
     </div>
     <div class="contact-item">
-        <div class="icon"><a href="{{$announcement->email}}"><img src="https://img.icons8.com/bubbles/50/000000/new-post.png"/></div></a>
+        <div class="icon"><a href="mailto:{{$announcement->email}}"><img src="https://img.icons8.com/bubbles/50/000000/new-post.png"/></div></a>
         <div class="contact-info">
             <h1>Email</h1>
             <h2>Click icon</h2>
@@ -174,7 +176,7 @@ St. Rose College Educational Foundation Inc. also has courses offered such as Ba
             </div>
         
             <div class="social-item">
-                <a href="https://www.mail.google.com/mail/mu/"><img src="https://img.icons8.com/ios/50/000000/apple-mail.png" alt="EMAIL IMG"/></a>
+            <a href="mailto:marandreitablatin10@gmail.com"><img src="https://img.icons8.com/ios/50/000000/apple-mail.png" alt="EMAIL IMG"/></a>
             </div>
         
         

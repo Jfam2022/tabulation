@@ -91,6 +91,9 @@ class StudentController extends Controller
             } if($student->role=="advertisement"){
               return redirect('advertisement');
 
+            } if($student->role=='ACCOUNTING'){
+              return redirect('accounting');
+
             }
             else{
               return redirect('dashboard');
@@ -105,6 +108,14 @@ class StudentController extends Controller
          return back()->with('fail','This email is not Verified.');
        }
   }
+
+  public function accounting(){
+    $data = array();
+    if(Session::has('loginId')){ 
+     $data= Student::where('id','=',\Session::get('loginId'))->first();
+    }
+      return view('accounting',compact('data'));
+     }
   public function advertisement(){
     $data = array();
     if(Session::has('loginId')){
@@ -134,9 +145,6 @@ $males = Tabulation::where('gender', '=', "MALE")
   public function admin(){
     $data = array();
     if(Session::has('loginId')){
-     
-        
-    
      $data= Student::where('id','=',\Session::get('loginId'))->first();
      $students = Student::paginate(6);
      return view('admin',compact('data','students'));

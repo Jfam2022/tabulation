@@ -54,7 +54,7 @@ input[type=number]::-webkit-outer-spin-button{
 
 <!-- end header-->
 <!--hero--> 
-<section id="hero"><br><br><br>
+<section id="hero"><br><br>
 <h2>CANDIDATES SCORE</h2>
 
 <div class="hero_container">
